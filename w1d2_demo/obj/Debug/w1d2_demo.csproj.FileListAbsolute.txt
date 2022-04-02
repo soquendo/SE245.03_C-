@@ -1,0 +1,7 @@
+C:\Users\soque\Desktop\SE245.03_CSharp\w1d2_demo\bin\Debug\w1d2_demo.exe.config
+C:\Users\soque\Desktop\SE245.03_CSharp\w1d2_demo\bin\Debug\w1d2_demo.exe
+C:\Users\soque\Desktop\SE245.03_CSharp\w1d2_demo\bin\Debug\w1d2_demo.pdb
+C:\Users\soque\Desktop\SE245.03_CSharp\w1d2_demo\obj\Debug\w1d2_demo.csproj.AssemblyReference.cache
+C:\Users\soque\Desktop\SE245.03_CSharp\w1d2_demo\obj\Debug\w1d2_demo.csproj.CoreCompileInputs.cache
+C:\Users\soque\Desktop\SE245.03_CSharp\w1d2_demo\obj\Debug\w1d2_demo.exe
+C:\Users\soque\Desktop\SE245.03_CSharp\w1d2_demo\obj\Debug\w1d2_demo.pdb
