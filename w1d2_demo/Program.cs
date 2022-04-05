@@ -53,6 +53,9 @@ namespace w1d2_demo //project name
                 case "MINUS":
                     intResult = intNum1 - intNum2;
                     break;
+                case "MULTIPLY":
+                    intResult = intNum1 * intNum2;
+                    break;
                 case "DIVIDE":
                     intResult = intNum1 / intNum2;
                     break;
