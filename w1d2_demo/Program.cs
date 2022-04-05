@@ -33,6 +33,7 @@ namespace w1d2_demo //project name
 
             Console.Write("Please enter the math operation (PLUS, MINUS, MULTIPLY, DIVIDE): ");
             strOperand = Console.ReadLine();
+            strOperand = strOperand.ToUpper();
 
             Console.Write("Please enter the second number: ");
             strNum2 = Console.ReadLine();
