@@ -6,4 +6,4 @@ console.writeline(dblIncome.ToString("0.00"));
 
 string.format(0:0.00", dblIncome)
 	  
-string.format("C", dblIncome) -- preformatted currency
+string.format("{0:C}", dblIncome) -- preformatted currency
