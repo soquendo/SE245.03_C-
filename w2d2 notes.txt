@@ -1,0 +1,9 @@
+double
+
+dblIncome = 100.2387654
+
+console.writeline(dblIncome.ToString("0.00"));
+
+string.format(0:0.00", dblIncome)
+	  
+string.format("C", dblIncome) -- preformatted currency
