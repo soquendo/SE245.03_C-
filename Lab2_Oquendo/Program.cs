@@ -27,7 +27,7 @@ namespace Lab2_Oquendo
 
             Int32 intLab1, intLab2, intLab3, intLab4, intLab5;
         
-            Double labGrade;
+            Double totalGrade;
 
             String strName, strLab1, strLab2, strLab3, strLab4, strLab5;
 
@@ -40,79 +40,57 @@ namespace Lab2_Oquendo
             List<Double> studentAvg = new List<Double>();
 
 
-            Console.Write("Please enter student name: ");
-            strName = Console.ReadLine();
-            names.Add(strName);
+            while (
+                (answer = "y") ;
 
-            Console.Write("Enter your grade for Lab #1 [0-100]: ");
-            strLab1 = Console.ReadLine();
-            intLab1 = Convert.ToInt32(strLab1);
-            lablist1.Add(intLab1);
+                Console.Write("Please enter student name: ");
+                strName = Console.ReadLine();
+                names.Add(strName);
 
-            Console.Write("Enter your grade for Lab #2 [0-100]: ");
-            strLab2 = Console.ReadLine();
-            intLab2 = Convert.ToInt32(strLab2);
-            lablist2.Add(intLab2);
+                Console.Write("Enter your grade for Lab #1 [0-100]: ");
+                strLab1 = Console.ReadLine();
+                intLab1 = Convert.ToInt32(strLab1);
+                lablist1.Add(intLab1);
 
-            Console.Write("Enter your grade for Lab #3 [0-100]: ");
-            strLab3 = Console.ReadLine();
-            intLab3 = Convert.ToInt32(strLab3);
-            lablist3.Add(intLab3);
+                Console.Write("Enter your grade for Lab #2 [0-100]: ");
+                strLab2 = Console.ReadLine();
+                intLab2 = Convert.ToInt32(strLab2);
+                lablist2.Add(intLab2);
 
-            Console.Write("Enter your grade for Lab #4 [0-100]: ");
-            strLab4 = Console.ReadLine();
-            intLab4 = Convert.ToInt32(strLab4);
-            lablist4.Add(intLab4);
+                Console.Write("Enter your grade for Lab #3 [0-100]: ");
+                strLab3 = Console.ReadLine();
+                intLab3 = Convert.ToInt32(strLab3);
+                lablist3.Add(intLab3);
 
-            Console.Write("Enter your grade for Lab #5 [0-100]: ");
-            strLab5 = Console.ReadLine();
-            intLab5 = Convert.ToInt32(strLab5);
-            lablist5.Add(intLab5);
+                Console.Write("Enter your grade for Lab #4 [0-100]: ");
+                strLab4 = Console.ReadLine();
+                intLab4 = Convert.ToInt32(strLab4);
+                lablist4.Add(intLab4);
 
-            labGrade = intLab1 + intLab2 + intLab3 + intLab4 + intLab5;
+                Console.Write("Enter your grade for Lab #5 [0-100]: ");
+                strLab5 = Console.ReadLine();
+                intLab5 = Convert.ToInt32(strLab5);
+                lablist5.Add(intLab5);
 
-            
+
+            Console.Write("Would you like to enter another student's grades? [Y/N]: ");
+            Console.ReadKey();
+
+            );
+
+            for (x = 0; x <= 5; x++)
 
 
-            if (finalGrade >= 90)
-            {
-                Console.WriteLine($"\n\nYou received an A! Your final grade is {finalGrade}");
+            for (x2 = 0; x2 <= 5; x2++)
+                    Console.WriteLine(names[x2])
+                    totalGrade += intLab1[x2]
 
-            }
 
-            else if (finalGrade >= 80)
-            {
-                Console.WriteLine($"\n\nYou received a B! Your final grade is {finalGrade}");
-
-            }
-
-            else if (finalGrade >= 70)
-            {
-                Console.WriteLine($"\n\nYou received a C! Your final grade is {finalGrade}");
-
-            }
-
-            else if (finalGrade >= 60)
-            {
-                Console.WriteLine($"\n\nYou received a D! Your final grade is {finalGrade}");
-
-            }
-
-            else if (finalGrade < 60)
-            {
-                Console.WriteLine($"\n\nYou did not pass the class, Your final grade is {finalGrade}");
-
-            }
+            double avg = totalGrade/5
 
 
             Console.WriteLine("\n\nPress any key to continue..");
             Console.ReadKey();
-
-
-
-
-
-
 
         }
     }
