@@ -87,7 +87,7 @@ namespace lab1_oquendo
 
             }
 
-            else if (finalGrade < 60)
+            else (finalGrade < 60)
             {
                 Console.WriteLine($"\n\nYou did not pass the class, Your final grade is {finalGrade}");
 

@@ -1,0 +1,7 @@
+C:\Users\008016420\Desktop\SE245.03_CSharp\Lab2_Oquendo\bin\Debug\Lab2_Oquendo.exe.config
+C:\Users\008016420\Desktop\SE245.03_CSharp\Lab2_Oquendo\bin\Debug\Lab2_Oquendo.exe
+C:\Users\008016420\Desktop\SE245.03_CSharp\Lab2_Oquendo\bin\Debug\Lab2_Oquendo.pdb
+C:\Users\008016420\Desktop\SE245.03_CSharp\Lab2_Oquendo\obj\Debug\Lab2_Oquendo.csproj.AssemblyReference.cache
+C:\Users\008016420\Desktop\SE245.03_CSharp\Lab2_Oquendo\obj\Debug\Lab2_Oquendo.csproj.CoreCompileInputs.cache
+C:\Users\008016420\Desktop\SE245.03_CSharp\Lab2_Oquendo\obj\Debug\Lab2_Oquendo.exe
+C:\Users\008016420\Desktop\SE245.03_CSharp\Lab2_Oquendo\obj\Debug\Lab2_Oquendo.pdb

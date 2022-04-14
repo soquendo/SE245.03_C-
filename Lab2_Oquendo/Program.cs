@@ -25,33 +25,43 @@ namespace Lab2_Oquendo
             //Print number grade average and letter grade for each student
             //End prog
 
-            Int32 intLab1, intLab2, intLab3, intLab4, intLab5;
-        
-            Double totalGrade;
+            Int32 intLab1, intLab2, intLab3, intLab4, intLab5, totalStudents = 0;
+            Double labAvg;
+            String strFname, strLname, strLab1, strLab2, strLab3, strLab4, strLab5, letGrade;
 
-            String strName, strLab1, strLab2, strLab3, strLab4, strLab5;
-
-            List<String> names = new List<String>();
+            List<String> fnames = new List<String>();
+            List<String> lnames = new List<String>();
+            List<String> letter = new List<String>();
             List<Int32> lablist1 = new List<Int32>();
             List<Int32> lablist2 = new List<Int32>();
             List<Int32> lablist3 = new List<Int32>();
             List<Int32> lablist4 = new List<Int32>();
             List<Int32> lablist5 = new List<Int32>();
-            List<Double> studentAvg = new List<Double>();
+            List<Double> studentsAvg = new List<Double>();
+            List<Double> classAvg1 = new List<Double>();
+            List<Double> classAvg2 = new List<Double>();
+            List<Double> classAvg3 = new List<Double>();
+            List<Double> classAvg4 = new List<Double>();
+            List<Double> classAvg5 = new List<Double>();
 
+            Console.Write("How many student records do we plan to process?: ");
+            totalStudents = int.Parse(Console.ReadLine());
 
-            while (
-                (answer = "y") ;
+            for (int cntr = 1; cntr <= totalStudents; cntr++)
+            {
+                Console.Write("Please enter student's first name: ");
+                strFname = Console.ReadLine();
+                fnames.Add(strFname);
 
-                Console.Write("Please enter student name: ");
-                strName = Console.ReadLine();
-                names.Add(strName);
+                Console.Write("Please enter student's last name: ");
+                strLname = Console.ReadLine();
+                lnames.Add(strLname);
 
                 Console.Write("Enter your grade for Lab #1 [0-100]: ");
                 strLab1 = Console.ReadLine();
                 intLab1 = Convert.ToInt32(strLab1);
                 lablist1.Add(intLab1);
-
+                
                 Console.Write("Enter your grade for Lab #2 [0-100]: ");
                 strLab2 = Console.ReadLine();
                 intLab2 = Convert.ToInt32(strLab2);
@@ -72,25 +82,68 @@ namespace Lab2_Oquendo
                 intLab5 = Convert.ToInt32(strLab5);
                 lablist5.Add(intLab5);
 
+                labAvg = (intLab1 + intLab2 + intLab3 + intLab4 + intLab5)/5;
+                studentsAvg.Add(labAvg);
 
-            Console.Write("Would you like to enter another student's grades? [Y/N]: ");
+                if (labAvg >= 90)
+                {
+                    letGrade = "A";
+                }
+
+                else if (labAvg >= 80)
+                {
+                    letGrade = "B";
+                }
+
+                else if (labAvg >= 70)
+                {
+                    letGrade = "C";
+                }
+
+                else if (labAvg >= 60)
+                {
+                    letGrade = "D";
+                }
+
+                else if (labAvg < 60)
+                {
+                    letGrade = "F";
+                }
+                letter.Add(letGrade);
+
+
+            }
+
+            double class1avg = (lablist1[0] + lablist1[1] + lablist1[2] + lablist1[3] + lablist1[4])/5;
+            double class2avg = (lablist2[0] + lablist2[1] + lablist2[2] + lablist2[3] + lablist2[4])/5;
+            double class3avg = (lablist3[0] + lablist3[1] + lablist3[2] + lablist3[3] + lablist3[4])/5;
+            double class4avg = (lablist4[0] + lablist4[1] + lablist4[2] + lablist4[3] + lablist4[4])/5;
+            double class5avg = (lablist5[0] + lablist5[1] + lablist5[2] + lablist5[3] + lablist5[4])/5;
+
+
+            
+
+            for (int i = 0; i < totalStudents; i++)
+            {
+
+                Console.WriteLine((String.Format("{0,30} {1,3} {2,3} {3,3} {4,3} {5,3} {6,10}", "Name", "Lab1", "Lab2", "Lab3", "Lab4", "Lab5", "Class Grade"));
+                Console.WriteLine(fnames[i] + " " + lnames[i] + "\t\t" + intLab1[i] + intLab2[i] + intLab3[i] + intLab4[i] + intLab5[i] + labAvg[i] + letGrade[i]);
+                Console.WriteLine(fnames[i] + " " + lnames[i] + "\t\t" + studentAvg[i] + letter[i]);
+                Console.WriteLine("Class Average: " );
+
+            }
+
+            
+
+            
+
+            Console.WriteLine("\n\nPress any key to end the program..");
             Console.ReadKey();
 
-            );
-
-            for (x = 0; x <= 5; x++)
 
 
-            for (x2 = 0; x2 <= 5; x2++)
-                    Console.WriteLine(names[x2])
-                    totalGrade += intLab1[x2]
 
-
-            double avg = totalGrade/5
-
-
-            Console.WriteLine("\n\nPress any key to continue..");
-            Console.ReadKey();
+            
 
         }
     }
