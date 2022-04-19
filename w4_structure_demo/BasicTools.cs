@@ -16,7 +16,7 @@ namespace w4_structure_demo
             Console.WriteLine("Published by Sebastian Oquendo");
 
             Console.WriteLine("\n\nPress any key to continue..");
-            Console.ReadKey();
+            pause();
 
         }
 
