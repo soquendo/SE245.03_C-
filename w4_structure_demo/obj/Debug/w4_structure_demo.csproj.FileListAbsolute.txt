@@ -1,0 +1,7 @@
+C:\Users\008016420\Desktop\SE245.03_CSharp\w4_structure_demo\bin\Debug\w4_structure_demo.exe.config
+C:\Users\008016420\Desktop\SE245.03_CSharp\w4_structure_demo\bin\Debug\w4_structure_demo.exe
+C:\Users\008016420\Desktop\SE245.03_CSharp\w4_structure_demo\bin\Debug\w4_structure_demo.pdb
+C:\Users\008016420\Desktop\SE245.03_CSharp\w4_structure_demo\obj\Debug\w4_structure_demo.csproj.AssemblyReference.cache
+C:\Users\008016420\Desktop\SE245.03_CSharp\w4_structure_demo\obj\Debug\w4_structure_demo.csproj.CoreCompileInputs.cache
+C:\Users\008016420\Desktop\SE245.03_CSharp\w4_structure_demo\obj\Debug\w4_structure_demo.exe
+C:\Users\008016420\Desktop\SE245.03_CSharp\w4_structure_demo\obj\Debug\w4_structure_demo.pdb

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "w4_structure_demo", "w4_structure_demo.csproj", "{CA452299-5416-4E1B-AB25-1C09EBAA3472}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA452299-5416-4E1B-AB25-1C09EBAA3472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA452299-5416-4E1B-AB25-1C09EBAA3472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA452299-5416-4E1B-AB25-1C09EBAA3472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA452299-5416-4E1B-AB25-1C09EBAA3472}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {674F859A-943A-44CF-9AC6-661E75088A3C}
+	EndGlobalSection
+EndGlobal
