@@ -1,0 +1,53 @@
+
+structures are predecessors to classes(anni - star wars ref)
+useful for just for data -keep local
+
+struct car
+{
+	string make;
+	string model;
+	double liters;
+	Bool Automatic;
+}
+
+car temp = newcar();
+car.make = "Honda";
+car.model = "Civic";
+Console.WriteLine("Make is" + car.make);
+---- public vars----
+
+
+
+
+
+
+classes (luke/rey)
+functionality
+can also have functions built in; "methods"
+
+
+class car
+{
+	public string make;
+	public string model;
+	public double liters;
+	public bool automatic;
+	public int speed = 0;	-- changed "public" to "private:
+	public accel(int speedupby)
+		{
+		speed += speedupby;
+		}
+	public decel (int slowdownby)
+		{
+		speed = slowdownby;
+		}
+	public setspeed (int myspeed)
+		{
+		speed = myspeed;
+		}
+
+}
+
+
+set and get capability
+
