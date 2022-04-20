@@ -1,0 +1,2 @@
+C:\Users\soque\Desktop\SE245.03_CSharp\lab3_oquendo\obj\Debug\lab3_oquendo.csproj.AssemblyReference.cache
+C:\Users\soque\Desktop\SE245.03_CSharp\lab3_oquendo\obj\Debug\lab3_oquendo.csproj.CoreCompileInputs.cache
