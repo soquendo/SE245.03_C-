@@ -31,7 +31,7 @@ namespace lab3_oquendo
             //End prog
 
             Int32 intLab1, intLab2, intLab3, intLab4, intLab5, totalStudents = 0;
-            Double labAvg;
+            Double grades, labAvg, numberGrade1 = 0, numberGrade2 = 0, numberGrade3 = 0, numberGrade4 = 0, numberGrade5 = 0;
             String strFname, strLname, strLab1, strLab2, strLab3, strLab4, strLab5, letGrade = "F";
 
             List<String> fnames = new List<String>();
@@ -65,26 +65,31 @@ namespace lab3_oquendo
                 Console.Write("Enter your grade for Lab #1 [0-100]: ");
                 strLab1 = Console.ReadLine();
                 intLab1 = Convert.ToInt32(strLab1);
+                numberGrade1 += intLab1;
                 lablist1.Add(intLab1);
-
+                
                 Console.Write("Enter your grade for Lab #2 [0-100]: ");
                 strLab2 = Console.ReadLine();
                 intLab2 = Convert.ToInt32(strLab2);
+                numberGrade2 += intLab2;
                 lablist2.Add(intLab2);
 
                 Console.Write("Enter your grade for Lab #3 [0-100]: ");
                 strLab3 = Console.ReadLine();
                 intLab3 = Convert.ToInt32(strLab3);
+                numberGrade3 += intLab3;
                 lablist3.Add(intLab3);
 
                 Console.Write("Enter your grade for Lab #4 [0-100]: ");
                 strLab4 = Console.ReadLine();
                 intLab4 = Convert.ToInt32(strLab4);
+                numberGrade4 += intLab4;
                 lablist4.Add(intLab4);
 
                 Console.Write("Enter your grade for Lab #5 [0-100]: ");
                 strLab5 = Console.ReadLine();
                 intLab5 = Convert.ToInt32(strLab5);
+                numberGrade5 += intLab5;
                 lablist5.Add(intLab5);
 
                 labAvg = (intLab1 + intLab2 + intLab3 + intLab4 + intLab5) / 5;
@@ -110,36 +115,33 @@ namespace lab3_oquendo
                     letGrade = "D";
                 }
 
-                else if (labAvg < 60)
+                else
                 {
                     letGrade = "F";
                 }
 
                 letter.Add(letGrade);
-
             }
 
+            numberGrade1 /= totalStudents;
+            numberGrade2 /= totalStudents;
+            numberGrade3 /= totalStudents;
+            numberGrade4 /= totalStudents;
+            numberGrade5 /= totalStudents;
+            
 
-            double lab1avg = (lablist1[0] + lablist1[1] + lablist1[2] + lablist1[3] + lablist1[4]) / 5;
-            double lab2avg = (lablist2[0] + lablist2[1] + lablist2[2] + lablist2[3] + lablist2[4]) / 5;
-            double lab3avg = (lablist3[0] + lablist3[1] + lablist3[2] + lablist3[3] + lablist3[4]) / 5;
-            double lab4avg = (lablist4[0] + lablist4[1] + lablist4[2] + lablist4[3] + lablist4[4]) / 5;
-            double lab5avg = (lablist5[0] + lablist5[1] + lablist5[2] + lablist5[3] + lablist5[4]) / 5;
-            double classavg = (lab1avg + lab2avg + lab3avg + lab4avg + lab5avg) / 5;
+            double classavg = (numberGrade1 + numberGrade2 + numberGrade3 + numberGrade4 + numberGrade5) / 5;
 
-            Console.WriteLine("Name\t\t" + "Lab1   " + "Lab2   " + "Lab3   " + "Lab4  " + "Lab5  " + "Grade");
+            Console.WriteLine("Name\t\t\t\t" + "Lab1   " + "Lab2   " + "Lab3   " + "Lab4  " + "Lab5  " + "Grade");
 
             for (int i = 0; i < totalStudents; i++)
             {
 
-
-                Console.WriteLine(fnames[i] + " " + lnames[i] + "\t\t" + lablist1[i] + "  " + lablist2[i] + "  " + lablist3[i] + "  " + lablist4[i] + "  " + lablist5[i] + "  " + studentsAvg[i] + "  " + letGrade[i]);
-
-
-
-                Console.WriteLine("Class Average:\t" + lab1avg + "  " + lab2avg + "  " + lab3avg + "  " + lab4avg + "  " + lab5avg + "  " + classavg);
+                Console.WriteLine(String.Format("{0,12} {1,12} {2,5} {3,5} {4,5} {5,5} {6,5} {7,5}  {8,2}", fnames[i], lnames[i] , lablist1[i], lablist2[i], lablist3[i], lablist4[i], lablist5[i], studentsAvg[i], letter[i]));
 
             }
+
+            Console.WriteLine(String.Format("Class Average:\t\t\t {0:0.0}  {1:0.0}  {2:0.0}  {3:0.0}  {4:0.0}  {5:0.0}", numberGrade1, numberGrade2, numberGrade3, numberGrade4, numberGrade5, classavg));
 
             Pause();
 
