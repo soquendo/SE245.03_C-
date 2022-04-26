@@ -1,0 +1,10 @@
+C:\Users\008016420\Desktop\SE245.03_CSharp\week5_class\bin\Debug\week5_class.exe.config
+C:\Users\008016420\Desktop\SE245.03_CSharp\week5_class\bin\Debug\week5_class.exe
+C:\Users\008016420\Desktop\SE245.03_CSharp\week5_class\bin\Debug\week5_class.pdb
+C:\Users\008016420\Desktop\SE245.03_CSharp\week5_class\obj\Debug\week5_class.csproj.AssemblyReference.cache
+C:\Users\008016420\Desktop\SE245.03_CSharp\week5_class\obj\Debug\week5_class.Form1.resources
+C:\Users\008016420\Desktop\SE245.03_CSharp\week5_class\obj\Debug\week5_class.Properties.Resources.resources
+C:\Users\008016420\Desktop\SE245.03_CSharp\week5_class\obj\Debug\week5_class.csproj.GenerateResource.cache
+C:\Users\008016420\Desktop\SE245.03_CSharp\week5_class\obj\Debug\week5_class.csproj.CoreCompileInputs.cache
+C:\Users\008016420\Desktop\SE245.03_CSharp\week5_class\obj\Debug\week5_class.exe
+C:\Users\008016420\Desktop\SE245.03_CSharp\week5_class\obj\Debug\week5_class.pdb
