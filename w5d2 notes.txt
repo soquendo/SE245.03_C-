@@ -1,0 +1,16 @@
+
+4/28 c# notes
+
+
+constructor - 
+
+when adding += to a value, it cant be "nothing"
+
+
+class form1 : form
+
+"main" is the first function to run
+
+
+
+**ask about tabs in form1**
