@@ -1,0 +1,10 @@
+C:\Users\soque\Desktop\SE245.03_CSharp\midterm_oquendo\bin\Debug\midterm_oquendo.exe.config
+C:\Users\soque\Desktop\SE245.03_CSharp\midterm_oquendo\bin\Debug\midterm_oquendo.exe
+C:\Users\soque\Desktop\SE245.03_CSharp\midterm_oquendo\bin\Debug\midterm_oquendo.pdb
+C:\Users\soque\Desktop\SE245.03_CSharp\midterm_oquendo\obj\Debug\midterm_oquendo.csproj.AssemblyReference.cache
+C:\Users\soque\Desktop\SE245.03_CSharp\midterm_oquendo\obj\Debug\midterm_oquendo.Form1.resources
+C:\Users\soque\Desktop\SE245.03_CSharp\midterm_oquendo\obj\Debug\midterm_oquendo.Properties.Resources.resources
+C:\Users\soque\Desktop\SE245.03_CSharp\midterm_oquendo\obj\Debug\midterm_oquendo.csproj.GenerateResource.cache
+C:\Users\soque\Desktop\SE245.03_CSharp\midterm_oquendo\obj\Debug\midterm_oquendo.csproj.CoreCompileInputs.cache
+C:\Users\soque\Desktop\SE245.03_CSharp\midterm_oquendo\obj\Debug\midterm_oquendo.exe
+C:\Users\soque\Desktop\SE245.03_CSharp\midterm_oquendo\obj\Debug\midterm_oquendo.pdb
