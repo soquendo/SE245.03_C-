@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lab4_oquendo
+namespace lab4_part2
 {
     class Program
     {
@@ -83,12 +83,12 @@ namespace lab4_oquendo
             Console.Write($"\n\t Phone: \t\t{temp.phone}");
             Console.Write($"\n\t E-Mail: \t\t{temp.email}");
 
-            
+
             BasicTools.Pause();
 
         }
 
-        
+
 
 
 

@@ -1,0 +1,7 @@
+C:\Users\soque\Desktop\SE245.03_CSharp\lab4_part2\obj\Debug\lab4_part2.csproj.AssemblyReference.cache
+C:\Users\soque\Desktop\SE245.03_CSharp\lab4_part2\obj\Debug\lab4_part2.csproj.CoreCompileInputs.cache
+C:\Users\soque\Desktop\SE245.03_CSharp\lab4_part2\bin\Debug\lab4_part2.exe.config
+C:\Users\soque\Desktop\SE245.03_CSharp\lab4_part2\bin\Debug\lab4_part2.exe
+C:\Users\soque\Desktop\SE245.03_CSharp\lab4_part2\bin\Debug\lab4_part2.pdb
+C:\Users\soque\Desktop\SE245.03_CSharp\lab4_part2\obj\Debug\lab4_part2.exe
+C:\Users\soque\Desktop\SE245.03_CSharp\lab4_part2\obj\Debug\lab4_part2.pdb

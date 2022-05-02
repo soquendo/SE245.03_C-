@@ -21,6 +21,18 @@ namespace midterm_oquendo
             return result;
         }
 
+        public static bool IsItFilledZip(string temp)
+        {
+            bool result = false;
+
+            if (temp.Length == 5)
+            {
+                result = true;
+            }
+
+            return result;
+        }
+
         public static bool IsItFilledIn(string temp)
         {
             bool result = false;
@@ -33,27 +45,28 @@ namespace midterm_oquendo
             return result;
         }
 
-        public static bool IsItFilledIn(string temp, int minlen)
+        public static bool IsItFilledPhone(string temp)
         {
             bool result = false;
 
-            if (temp.Length >= minlen)
+            if (temp.Length == 10)
             {
                 result = true;
             }
-
+            
             return result;
         }
 
         public static bool stateABV(string temp, int maxlen)
         {
             bool result = false;
+            maxlen = 2;
 
             if (temp.Length == maxlen)
             {
                 result = true;
             }
-
+            
             return result;
         }
 
@@ -107,6 +120,22 @@ namespace midterm_oquendo
 
         }
 
+        public static bool IsMinAmount(double temp, double min)
+        {
+            bool blnResult;
+
+            if (temp >= min)
+            {
+                blnResult = true;
+            }
+            else
+            {
+                blnResult = false;
+            }
+
+            return blnResult;
+
+        }
 
     }
 }

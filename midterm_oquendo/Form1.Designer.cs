@@ -51,7 +51,7 @@ namespace midterm_oquendo
             this.txt_email = new System.Windows.Forms.TextBox();
             this.submit_button = new System.Windows.Forms.Button();
             this.lbl_title = new System.Windows.Forms.Label();
-            this.lbl_feedback = new System.Windows.Forms.Label();
+            this.txt_feedback = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_fname
@@ -87,20 +87,20 @@ namespace midterm_oquendo
             // lbl_street1
             // 
             this.lbl_street1.AutoSize = true;
-            this.lbl_street1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_street1.Location = new System.Drawing.Point(194, 412);
+            this.lbl_street1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_street1.Location = new System.Drawing.Point(150, 415);
             this.lbl_street1.Name = "lbl_street1";
-            this.lbl_street1.Size = new System.Drawing.Size(249, 29);
+            this.lbl_street1.Size = new System.Drawing.Size(265, 30);
             this.lbl_street1.TabIndex = 3;
             this.lbl_street1.Text = "Street Address Line 1:";
             // 
             // lbl_street2
             // 
             this.lbl_street2.AutoSize = true;
-            this.lbl_street2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_street2.Location = new System.Drawing.Point(194, 483);
+            this.lbl_street2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_street2.Location = new System.Drawing.Point(150, 486);
             this.lbl_street2.Name = "lbl_street2";
-            this.lbl_street2.Size = new System.Drawing.Size(249, 29);
+            this.lbl_street2.Size = new System.Drawing.Size(265, 30);
             this.lbl_street2.TabIndex = 4;
             this.lbl_street2.Text = "Street Address Line 2:";
             // 
@@ -255,23 +255,23 @@ namespace midterm_oquendo
             this.lbl_title.TabIndex = 21;
             this.lbl_title.Text = "Enter Account Info:";
             // 
-            // lbl_feedback
+            // txt_feedback
             // 
-            this.lbl_feedback.AutoSize = true;
-            this.lbl_feedback.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_feedback.Location = new System.Drawing.Point(758, 695);
-            this.lbl_feedback.Name = "lbl_feedback";
-            this.lbl_feedback.Size = new System.Drawing.Size(186, 26);
-            this.lbl_feedback.TabIndex = 22;
-            this.lbl_feedback.Text = "Feedback Results";
-            this.lbl_feedback.Click += new System.EventHandler(this.label1_Click);
+            this.txt_feedback.AutoSize = true;
+            this.txt_feedback.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_feedback.Location = new System.Drawing.Point(758, 695);
+            this.txt_feedback.Name = "txt_feedback";
+            this.txt_feedback.Size = new System.Drawing.Size(186, 26);
+            this.txt_feedback.TabIndex = 22;
+            this.txt_feedback.Text = "Feedback Results";
+            this.txt_feedback.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1683, 1090);
-            this.Controls.Add(this.lbl_feedback);
+            this.Controls.Add(this.txt_feedback);
             this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.submit_button);
             this.Controls.Add(this.txt_email);
@@ -324,7 +324,7 @@ namespace midterm_oquendo
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.Button submit_button;
         private System.Windows.Forms.Label lbl_title;
-        private System.Windows.Forms.Label lbl_feedback;
+        private System.Windows.Forms.Label txt_feedback;
         private System.Windows.Forms.TextBox txt_street2;
     }
 }

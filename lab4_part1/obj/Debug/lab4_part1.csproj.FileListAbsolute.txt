@@ -1,0 +1,6 @@
+C:\Users\soque\Desktop\SE245.03_CSharp\lab4_part1\obj\Debug\lab4_part1.csproj.CoreCompileInputs.cache
+C:\Users\soque\Desktop\SE245.03_CSharp\lab4_part1\bin\Debug\lab4_part1.exe.config
+C:\Users\soque\Desktop\SE245.03_CSharp\lab4_part1\bin\Debug\lab4_part1.exe
+C:\Users\soque\Desktop\SE245.03_CSharp\lab4_part1\bin\Debug\lab4_part1.pdb
+C:\Users\soque\Desktop\SE245.03_CSharp\lab4_part1\obj\Debug\lab4_part1.exe
+C:\Users\soque\Desktop\SE245.03_CSharp\lab4_part1\obj\Debug\lab4_part1.pdb

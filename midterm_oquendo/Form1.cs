@@ -31,7 +31,15 @@ namespace midterm_oquendo
             temp.Phone = txt_phone.Text;
             temp.Email = txt_email.Text;
 
-            lbl_feedback.Text = "First Name: " + txt_fname.Text + "\nMiddle Name: " + txt_mname.Text + "\nLast Name: " + txt_lname.Text + "\nAddress Line #1: " + txt_street1.Text + "\nAddress Line #2: " + txt_street2.Text + "\nCity: " + txt_city.Text + "\nState: " + txt_state.Text + "\nZip Code: " + txt_zipcode.Text + "\nPhone Number: " + txt_phone.Text + "\nE-Mail: " + txt_email.Text;
+            if (temp.Feedback.Contains("ERROR:"))
+            {
+                txt_feedback.Text = temp.Feedback;
+            }
+            else
+            {
+                txt_feedback.Text = "First Name: " + temp.fname + "\nMiddle Name: " + temp.mname + "\nLast Name: " + temp.lname + "\nAddress Line #1: " + temp.Street1 + "\nAddress Line #2: " + temp.Street2 + "\nCity: " + temp.City + "\nState: " + temp.State + "\nZip Code: " + temp.Zipcode + "\nPhone Number: " + temp.Phone + "\nE-Mail: " + temp.Email;
+            }
+
 
         }
 

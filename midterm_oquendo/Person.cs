@@ -18,6 +18,20 @@ namespace midterm_oquendo
         private string zipCode;
         private string phone;
         private string email;
+        private string feedback = "";
+
+        public string Feedback
+        {
+            get
+            {
+                return feedback; 
+            }
+
+            set
+            {
+                feedback = value;
+            }
+        }
 
         public string fname
         {
@@ -106,7 +120,15 @@ namespace midterm_oquendo
 
             set
             {
-                state = value;
+                if (ValidationLibrary.stateABV(value, 2) == true)
+                {
+                    state = value;
+                }
+                else
+                {
+                    Feedback = "ERROR: Enter two-character state abbreviation ex. NY, MT, WA";
+                }
+
             }
         }
 
@@ -119,7 +141,15 @@ namespace midterm_oquendo
 
             set
             {
-                zipCode = value;
+                if (ValidationLibrary.IsItFilledZip(value))
+                {
+                    zipCode = value;
+                }
+                else
+                {
+                    Feedback = "ERROR: Enter 5-digit zip code ex. 02861";
+                }
+
             }
         }
 
@@ -132,13 +162,13 @@ namespace midterm_oquendo
 
             set
             {
-                if (ValidationLibrary.IsItFilledIn(value, 10) == true)
+                if (ValidationLibrary.IsItFilledPhone(value))
                 {
                     phone = value;
                 }
                 else
                 {
-                    phone = "Error; Enter 10=digit phone number ex. 3025559999";
+                    Feedback = "ERROR: Enter 10-digit phone number ex. 3335559999";
                 }
 
             }
@@ -159,7 +189,7 @@ namespace midterm_oquendo
                 }
                 else
                 {
-                    email = "INVALID";
+                    Feedback = "ERROR: Invalid Email format";
                 }
 
             }
