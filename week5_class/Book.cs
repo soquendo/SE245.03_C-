@@ -12,6 +12,7 @@ namespace week5_class
         private string authorFirst;
         private string authorLast;
         private double price;
+        private string datepub;
         private string feedback;
         //private string feedback = "";
 
