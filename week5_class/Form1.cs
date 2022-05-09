@@ -37,13 +37,42 @@ namespace week5_class
             lblFeedback.Text = "";
 
             //create an empty or blank book
-            Book temp = new Book();
+            Ebook temp = new Ebook();
 
             //fill in the book specs
             temp.Title = txtTitle.Text;
             temp.AuthorFirst = txtAuthorFirst.Text;
             temp.AuthorLast = txtAuthorLast.Text;
-            
+            temp.Email = txtEmail.Text;
+
+            temp.DatePublished = dtpDatePublished.Value;
+            temp.RentalDueDate = dtpRentalDueDate.Value;
+
+            int intTempPages;
+            bool blnResult = Int32.TryParse(txtPages.Text, out intTempPages);
+            if (blnResult == false)
+            {
+                lblFeedback.Text += "Incorrect page number, please try again. (Ex. 128) ";
+            }
+            else
+            {
+                temp.Pages = intTempPages;
+            }
+
+
+            int intBMPage;
+            blnResult = Int32.TryParse(txtBookmark.Text, out intBMPage);
+
+            if (blnResult == false)
+            {
+                lblFeedback.Text += "Incorrect bookmark page number, please try again. (Ex. 198) ";
+            }
+            else
+            {
+                temp.BookmarkPg = intBMPage;
+            }
+
+
 
             //temp.Price = txtPrice.Text;
             double tPrice = 0;
@@ -57,6 +86,7 @@ namespace week5_class
                 lblFeedback.Text = "ERROR: Price must be numeric. (Ex: 12.99)";
             }
 
+
             //check for potential errors, and print them OR print out info
             if (lblFeedback.Text.Contains("ERROR:"))
             {
@@ -68,7 +98,7 @@ namespace week5_class
             }
             else
             {
-                lblFeedback.Text = $"{temp.Title} by {temp.AuthorFirst} {temp.AuthorLast} costs ${temp.Price}";
+                lblFeedback.Text = $"{temp.Title}, published {temp.DatePublished} by {temp.AuthorFirst} {temp.AuthorLast} costs ${temp.Price}; Rental expires {temp.RentalDueDate}";
             }
 
         }
@@ -89,6 +119,10 @@ namespace week5_class
             txtAuthorFirst.Text = "George";
             txtAuthorLast.Text = "Lucas";
             txtPrice.Text = "5.99";
+            txtEmail.Text = "GLucas@lucasfilm.com";
+            txtPages.Text = "300";
+            txtBookmark.Text = "61";
+            
 
         }
 

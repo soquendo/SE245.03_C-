@@ -11,24 +11,24 @@ namespace week5_class
         private string title;
         private string authorFirst;
         private string authorLast;
+        private string email;
+        private DateTime datePublished;
+        private int pages;
         private double price;
-        private string datepub;
-        private string feedback;
-        //private string feedback = "";
 
-        public Book()
-        {
-            price = 0;
-            feedback = "";
-        }
+        protected string feedback;
+       
 
         public string Title
         {
-            get { return title; }
+            get
+            { 
+                return title;
+            }
 
             set 
             { 
-                if (value.ToUpper().Contains("HOMEWORK") == false)
+                if (!ValidationLibrary.badWords(value))
                 {
                     title = value;
                 }
@@ -41,11 +41,14 @@ namespace week5_class
 
         public string AuthorFirst
         {
-            get { return authorFirst; }
+            get 
+            {
+                return authorFirst;
+            }
 
             set
             {
-                if (value.ToUpper().Contains("HOMEWORK") == false)
+                if (!ValidationLibrary.badWords(value))
                 {
                     authorFirst = value;
                 }
@@ -62,7 +65,7 @@ namespace week5_class
 
             set
             {
-                if (value.ToUpper().Contains("HOMEWORK") == false)
+                if (!ValidationLibrary.badWords(value))
                 {
                     authorLast = value;
                 }
@@ -73,31 +76,103 @@ namespace week5_class
             }
         }
 
+        public string Email
+        {
+            get
+            {
+                return email;
+            }
+
+            set
+            {
+                if (ValidationLibrary.IsValidEmail(value))
+                {
+                    email = value;
+                }
+                else
+                {
+                    feedback += "\nERROR: Invalid email.";
+                }
+            }
+
+        }
+
+        public DateTime DatePublished
+        {
+            get
+            {
+                return datePublished;
+            }
+
+            set
+            {
+                if (ValidationLibrary.IsAFutureDate(value) == false)
+                {
+                    datePublished = value;
+                }
+                else
+                {
+                    feedback += "\nERROR: You cannot enter future dates";
+                }
+            }
+        }
+
+
+        public int Pages
+        {
+            get
+            {
+                return pages;
+            }
+
+            set
+            {
+                if (ValidationLibrary.IsMinimumAmount(value, 1) == true)
+                {
+                    pages = value;
+                }
+                else
+                {
+                    feedback += "\nERROR: Sorry number of pages is invalid.";
+                }
+
+            }
+        }
+
+
         public double Price
         {
             get { return price; }
 
             set
             {
-                if (value  >= 0)
+                if (ValidationLibrary.IsMinimumAmount(value, 1) == true)
                 {
                     price = value;
                 }
-
                 else
                 {
-                    feedback += "\nERROR: Price must be 0 or greater";
+                    feedback += "\nERROR: Price is not sufficient.";
                 }
-
             }
         }
+
 
         public string Feedback
         {
             get { return feedback; }
         }
         
-
+        public Book()
+        {
+            title = "";
+            authorFirst = "";
+            authorLast = "";
+            pages = 0;
+            datePublished = DateTime.Parse("1/1/1500");
+            price = 0.0;
+            feedback = "";
+        }
 
 
     }

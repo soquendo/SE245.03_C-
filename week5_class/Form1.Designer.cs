@@ -33,33 +33,41 @@ namespace week5_class
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblFeedback = new System.Windows.Forms.Label();
             this.btnAddBook = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblLname = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblFname = new System.Windows.Forms.Label();
             this.txtAuthorFirst = new System.Windows.Forms.TextBox();
             this.txtAuthorLast = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.sample = new System.Windows.Forms.Button();
             this.dtpDatePublished = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblDatePub = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblPages = new System.Windows.Forms.Label();
+            this.lblReturn = new System.Windows.Forms.Label();
+            this.dtpRentalDueDate = new System.Windows.Forms.DateTimePicker();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtPages = new System.Windows.Forms.TextBox();
+            this.txtBookmark = new System.Windows.Forms.TextBox();
+            this.lblBookmark = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(506, 157);
+            this.txtTitle.Location = new System.Drawing.Point(561, 118);
             this.txtTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(406, 26);
+            this.txtTitle.Size = new System.Drawing.Size(406, 35);
             this.txtTitle.TabIndex = 0;
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(359, 166);
+            this.lblTitle.Location = new System.Drawing.Point(448, 124);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(75, 17);
+            this.lblTitle.Size = new System.Drawing.Size(105, 25);
             this.lblTitle.TabIndex = 13;
             this.lblTitle.Text = "Book Title:";
             this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
@@ -67,15 +75,15 @@ namespace week5_class
             // lblFeedback
             // 
             this.lblFeedback.AutoSize = true;
-            this.lblFeedback.Location = new System.Drawing.Point(502, 517);
+            this.lblFeedback.Location = new System.Drawing.Point(363, 684);
             this.lblFeedback.Name = "lblFeedback";
-            this.lblFeedback.Size = new System.Drawing.Size(155, 20);
+            this.lblFeedback.Size = new System.Drawing.Size(236, 29);
             this.lblFeedback.TabIndex = 12;
             this.lblFeedback.Text = "Feedback goes here";
             // 
             // btnAddBook
             // 
-            this.btnAddBook.Location = new System.Drawing.Point(561, 411);
+            this.btnAddBook.Location = new System.Drawing.Point(561, 579);
             this.btnAddBook.Name = "btnAddBook";
             this.btnAddBook.Size = new System.Drawing.Size(108, 33);
             this.btnAddBook.TabIndex = 5;
@@ -83,61 +91,61 @@ namespace week5_class
             this.btnAddBook.UseVisualStyleBackColor = true;
             this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
-            // label2
+            // lblLname
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(359, 234);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 17);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Author Last Name:";
+            this.lblLname.AutoSize = true;
+            this.lblLname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLname.Location = new System.Drawing.Point(363, 236);
+            this.lblLname.Name = "lblLname";
+            this.lblLname.Size = new System.Drawing.Size(189, 25);
+            this.lblLname.TabIndex = 15;
+            this.lblLname.Text = "Author\'s Last Name:";
             // 
-            // label3
+            // lblPrice
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(359, 297);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 17);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Price:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(489, 451);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(62, 25);
+            this.lblPrice.TabIndex = 17;
+            this.lblPrice.Text = "Price:";
+            this.lblPrice.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label1
+            // lblFname
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(359, 200);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 17);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Author First Name:";
+            this.lblFname.AutoSize = true;
+            this.lblFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFname.Location = new System.Drawing.Point(362, 184);
+            this.lblFname.Name = "lblFname";
+            this.lblFname.Size = new System.Drawing.Size(189, 25);
+            this.lblFname.TabIndex = 14;
+            this.lblFname.Text = "Author\'s First Name:";
             // 
             // txtAuthorFirst
             // 
-            this.txtAuthorFirst.Location = new System.Drawing.Point(506, 194);
+            this.txtAuthorFirst.Location = new System.Drawing.Point(561, 178);
             this.txtAuthorFirst.Name = "txtAuthorFirst";
-            this.txtAuthorFirst.Size = new System.Drawing.Size(281, 26);
+            this.txtAuthorFirst.Size = new System.Drawing.Size(281, 35);
             this.txtAuthorFirst.TabIndex = 1;
             // 
             // txtAuthorLast
             // 
-            this.txtAuthorLast.Location = new System.Drawing.Point(506, 228);
+            this.txtAuthorLast.Location = new System.Drawing.Point(562, 230);
             this.txtAuthorLast.Name = "txtAuthorLast";
-            this.txtAuthorLast.Size = new System.Drawing.Size(281, 26);
+            this.txtAuthorLast.Size = new System.Drawing.Size(281, 35);
             this.txtAuthorLast.TabIndex = 2;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(506, 291);
+            this.txtPrice.Location = new System.Drawing.Point(564, 445);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(81, 26);
+            this.txtPrice.Size = new System.Drawing.Size(115, 35);
             this.txtPrice.TabIndex = 4;
             // 
             // sample
             // 
-            this.sample.Location = new System.Drawing.Point(943, 411);
+            this.sample.Location = new System.Drawing.Point(961, 579);
             this.sample.Name = "sample";
             this.sample.Size = new System.Drawing.Size(121, 33);
             this.sample.TabIndex = 11;
@@ -148,36 +156,113 @@ namespace week5_class
             // dtpDatePublished
             // 
             this.dtpDatePublished.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDatePublished.Location = new System.Drawing.Point(506, 260);
+            this.dtpDatePublished.Location = new System.Drawing.Point(564, 391);
             this.dtpDatePublished.Name = "dtpDatePublished";
-            this.dtpDatePublished.Size = new System.Drawing.Size(151, 26);
+            this.dtpDatePublished.Size = new System.Drawing.Size(151, 35);
             this.dtpDatePublished.TabIndex = 3;
             // 
-            // label4
+            // lblDatePub
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(358, 266);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 17);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Date Published:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.lblDatePub.AutoSize = true;
+            this.lblDatePub.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatePub.Location = new System.Drawing.Point(408, 399);
+            this.lblDatePub.Name = "lblDatePub";
+            this.lblDatePub.Size = new System.Drawing.Size(150, 25);
+            this.lblDatePub.TabIndex = 16;
+            this.lblDatePub.Text = "Date Published:";
+            this.lblDatePub.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(410, 290);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(143, 25);
+            this.lblEmail.TabIndex = 18;
+            this.lblEmail.Text = "Author\'s Email:";
+            // 
+            // lblPages
+            // 
+            this.lblPages.AutoSize = true;
+            this.lblPages.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPages.Location = new System.Drawing.Point(428, 342);
+            this.lblPages.Name = "lblPages";
+            this.lblPages.Size = new System.Drawing.Size(123, 25);
+            this.lblPages.TabIndex = 19;
+            this.lblPages.Text = "Total Pages:";
+            // 
+            // lblReturn
+            // 
+            this.lblReturn.AutoSize = true;
+            this.lblReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReturn.Location = new System.Drawing.Point(804, 399);
+            this.lblReturn.Name = "lblReturn";
+            this.lblReturn.Size = new System.Drawing.Size(121, 25);
+            this.lblReturn.TabIndex = 20;
+            this.lblReturn.Text = "Return Date:";
+            // 
+            // dtpRentalDueDate
+            // 
+            this.dtpRentalDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpRentalDueDate.Location = new System.Drawing.Point(931, 391);
+            this.dtpRentalDueDate.Name = "dtpRentalDueDate";
+            this.dtpRentalDueDate.Size = new System.Drawing.Size(151, 35);
+            this.dtpRentalDueDate.TabIndex = 3;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(562, 284);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(281, 35);
+            this.txtEmail.TabIndex = 21;
+            // 
+            // txtPages
+            // 
+            this.txtPages.Location = new System.Drawing.Point(562, 336);
+            this.txtPages.Name = "txtPages";
+            this.txtPages.Size = new System.Drawing.Size(110, 35);
+            this.txtPages.TabIndex = 22;
+            // 
+            // txtBookmark
+            // 
+            this.txtBookmark.Location = new System.Drawing.Point(564, 501);
+            this.txtBookmark.Name = "txtBookmark";
+            this.txtBookmark.Size = new System.Drawing.Size(115, 35);
+            this.txtBookmark.TabIndex = 23;
+            // 
+            // lblBookmark
+            // 
+            this.lblBookmark.AutoSize = true;
+            this.lblBookmark.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBookmark.Location = new System.Drawing.Point(378, 507);
+            this.lblBookmark.Name = "lblBookmark";
+            this.lblBookmark.Size = new System.Drawing.Size(173, 25);
+            this.lblBookmark.TabIndex = 24;
+            this.lblBookmark.Text = "Bookmark Page #:";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1564, 709);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(1497, 925);
+            this.Controls.Add(this.lblBookmark);
+            this.Controls.Add(this.txtBookmark);
+            this.Controls.Add(this.txtPages);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.lblReturn);
+            this.Controls.Add(this.lblPages);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblDatePub);
+            this.Controls.Add(this.dtpRentalDueDate);
             this.Controls.Add(this.dtpDatePublished);
             this.Controls.Add(this.sample);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtAuthorLast);
             this.Controls.Add(this.txtAuthorFirst);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblFname);
+            this.Controls.Add(this.lblPrice);
+            this.Controls.Add(this.lblLname);
             this.Controls.Add(this.btnAddBook);
             this.Controls.Add(this.lblFeedback);
             this.Controls.Add(this.lblTitle);
@@ -185,7 +270,7 @@ namespace week5_class
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Book";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,15 +282,23 @@ namespace week5_class
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblFeedback;
         private System.Windows.Forms.Button btnAddBook;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLname;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label lblFname;
         private System.Windows.Forms.TextBox txtAuthorFirst;
         private System.Windows.Forms.TextBox txtAuthorLast;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Button sample;
         private System.Windows.Forms.DateTimePicker dtpDatePublished;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblDatePub;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblPages;
+        private System.Windows.Forms.Label lblReturn;
+        private System.Windows.Forms.DateTimePicker dtpRentalDueDate;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtPages;
+        private System.Windows.Forms.TextBox txtBookmark;
+        private System.Windows.Forms.Label lblBookmark;
     }
 }
 

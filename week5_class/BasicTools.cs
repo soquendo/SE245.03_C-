@@ -14,11 +14,5 @@ namespace week5_class
             MessageBox.Show("Copyright 2021 - Lambert Industries");
         }
 
-
-
-
-
-
-
     }
 }
