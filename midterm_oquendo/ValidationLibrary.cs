@@ -9,14 +9,17 @@ namespace midterm_oquendo
     class ValidationLibrary
     {
 
-        public static bool GotPoop(string temp)
+        public static bool badWords(string temp)
         {
             bool result = false;
 
-            if (temp.Contains("Poop"))
-            {
-                result = true;
-            }
+            string[] strbadWords = { "POOP", "HOMEWORK", "CACA" };
+
+            foreach (string strBW in strbadWords)
+                if (temp.Contains(strBW))
+                {
+                    result = true;
+                }
 
             return result;
         }
@@ -103,7 +106,37 @@ namespace midterm_oquendo
 
         }
 
-        public static bool IsMinAmount(int temp, int min)
+
+        public static bool IsItFilledIn(string temp, int minlen)
+        {
+            bool result = false;
+
+            if (temp.Length >= minlen)
+            {
+                result = true;
+            }
+
+            return result;
+        }
+
+        public static bool IsAFutureDate(DateTime temp)
+        {
+            bool blnResult;
+
+            if (temp <= DateTime.Now)
+            {
+                blnResult = false;
+            }
+            else
+            {
+                blnResult = true;
+            }
+
+            return blnResult;
+        }
+
+
+        public static bool IsMinimumAmount(int temp, int min)
         {
             bool blnResult;
 
@@ -120,7 +153,8 @@ namespace midterm_oquendo
 
         }
 
-        public static bool IsMinAmount(double temp, double min)
+
+        public static bool IsMinimumAmount(double temp, double min)
         {
             bool blnResult;
 
@@ -134,7 +168,6 @@ namespace midterm_oquendo
             }
 
             return blnResult;
-
         }
 
     }
