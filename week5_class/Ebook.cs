@@ -66,14 +66,5 @@ namespace week5_class
             rentalDueDate = DateTime.Now.AddDays(14);
         }
 
-
-
-
-
-
-
-
-
-
     }
 }

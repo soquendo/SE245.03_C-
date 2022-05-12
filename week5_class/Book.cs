@@ -146,7 +146,7 @@ namespace week5_class
 
             set
             {
-                if (ValidationLibrary.IsMinimumAmount(value, 1) == true)
+                if (ValidationLibrary.IsMinimumAmount(value, 0) == true)
                 {
                     price = value;
                 }

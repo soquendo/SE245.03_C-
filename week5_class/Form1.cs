@@ -16,6 +16,8 @@ namespace week5_class
         {
             //retrieves from the parent
             InitializeComponent();
+
+            dtpRentalDueDate.Value = DateTime.Now.AddDays(14);
         }
 
         private void lblFeedback_Click(object sender, EventArgs e)

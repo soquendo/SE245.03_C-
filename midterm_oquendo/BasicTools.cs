@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lab4_oquendo
+namespace midterm_oquendo
 {
     public class BasicTools
     {
@@ -13,8 +13,5 @@ namespace lab4_oquendo
             Console.WriteLine("\n\nPress any key to continue\n");
             Console.ReadKey();
         }
-
-
-
     }
 }

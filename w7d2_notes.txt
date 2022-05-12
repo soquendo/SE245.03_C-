@@ -1,0 +1,23 @@
+c# 5/12/22
+
+has 1 @ sign - find find "@" (IndexOf)
+
+-1 = "not found"
+
+position in string - position should be >= 2
+
+
+has 2nd @ sign = bad
+	start looking at (@position +1)
+
+has >= 1 period
+
+LastIndexOf() - starts looking from the right
+
+
+command object is like a remote control
+barks out sql statement
+
+@fieldname is to acknowledge a value needs to
+be passed and will be done at a later time
+

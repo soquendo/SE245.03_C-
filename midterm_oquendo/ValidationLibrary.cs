@@ -36,17 +36,6 @@ namespace midterm_oquendo
             return result;
         }
 
-        public static bool IsItFilledIn(string temp)
-        {
-            bool result = false;
-
-            if (temp.Length > 0)
-            {
-                result = true;
-            }
-
-            return result;
-        }
 
         public static bool IsItFilledPhone(string temp)
         {
@@ -104,6 +93,18 @@ namespace midterm_oquendo
 
             return blnResult;
 
+        }
+
+        public static bool IsItFilledIn(string temp)
+        {
+            bool result = false;
+
+            if (temp.Length > 0)
+            {
+                result = true;
+            }
+
+            return result;
         }
 
 
@@ -167,6 +168,22 @@ namespace midterm_oquendo
                 blnResult = false;
             }
 
+            return blnResult;
+        }
+
+
+        public static bool IsItNum(string temp)
+        {
+            string strGoodChars = "0123456789";
+            bool blnResult = true;
+
+            foreach(char ch in temp)
+            {
+                if (!strGoodChars.Contains(ch))
+                {
+                    blnResult = false;
+                }                  
+            }
             return blnResult;
         }
 

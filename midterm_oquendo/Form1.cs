@@ -19,7 +19,9 @@ namespace midterm_oquendo
 
         private void submit_button_Click(object sender, EventArgs e)
         {
-            Person temp = new Person();
+            txt_feedback.Text = "";
+            PersonV2 temp = new PersonV2();
+            
             temp.fname = txt_fname.Text;
             temp.mname = txt_mname.Text;
             temp.lname = txt_lname.Text;
@@ -30,6 +32,10 @@ namespace midterm_oquendo
             temp.Zipcode = txt_zipcode.Text;
             temp.Phone = txt_phone.Text;
             temp.Email = txt_email.Text;
+
+            temp.Cellphone = txt_cellphone.Text;
+            temp.IG = txt_Instagram.Text;
+            
 
             if (temp.Feedback.Contains("ERROR:"))
             {
@@ -46,6 +52,16 @@ namespace midterm_oquendo
         private void label1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
