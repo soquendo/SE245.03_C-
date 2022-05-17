@@ -23,7 +23,7 @@ namespace midterm_oquendo
 
             set
             {
-
+                customerSince = value;
             }
         }
 
@@ -36,7 +36,7 @@ namespace midterm_oquendo
 
             set
             {
-
+                totalPurchases = value;
             }
         }
 
@@ -49,7 +49,7 @@ namespace midterm_oquendo
 
             set
             {
-
+                discountMember = value;
             }
         }
 
@@ -62,11 +62,10 @@ namespace midterm_oquendo
 
             set
             {
-
+                rewardsEarned = value;
             }
         }
 
-      
 
     }
 }

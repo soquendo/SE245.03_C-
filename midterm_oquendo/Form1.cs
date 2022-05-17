@@ -43,7 +43,7 @@ namespace midterm_oquendo
             }
             else
             {
-                txt_feedback.Text = "First Name: " + temp.fname + "\nMiddle Name: " + temp.mname + "\nLast Name: " + temp.lname + "\nAddress Line #1: " + temp.Street1 + "\nAddress Line #2: " + temp.Street2 + "\nCity: " + temp.City + "\nState: " + temp.State + "\nZip Code: " + temp.Zipcode + "\nPhone Number: " + temp.Phone + "\nE-Mail: " + temp.Email;
+                txt_feedback.Text = "First Name: " + temp.fname + "\nMiddle Name: " + temp.mname + "\nLast Name: " + temp.lname + "\nAddress Line #1: " + temp.Street1 + "\nAddress Line #2: " + temp.Street2 + "\nCity: " + temp.City + "\nState: " + temp.State + "\nZip Code: " + temp.Zipcode + "\nPhone Number: " + temp.Phone + "\nCell Phone: " + temp.Cellphone + "\nE-Mail: " + temp.Email + "\nInstagram: " + temp.IG;
             }
 
 

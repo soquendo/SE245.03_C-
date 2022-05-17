@@ -124,6 +124,7 @@ namespace midterm_oquendo
                 {
                     state = value;
                 }
+                
                 else
                 {
                     Feedback = "ERROR: Enter two-character state abbreviation ex. NY, MT, WA";
@@ -162,13 +163,13 @@ namespace midterm_oquendo
 
             set
             {
-                if (ValidationLibrary.IsItFilledPhone(value))
+                if (ValidationLibrary.IsItNum(value) == false)
                 {
-                    phone = value;
+                    Feedback += "\nERROR: Please enter only digits (Ex. 4015551234)";
                 }
                 else
                 {
-                    Feedback = "ERROR: Enter 10-digit phone number ex. 3335559999";
+                    phone = value;
                 }
 
             }
