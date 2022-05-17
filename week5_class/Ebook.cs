@@ -8,29 +8,23 @@ using System.Data.SqlClient;
 
 namespace week5_class
 {
-    /*-Build your EBook class by inheriting the Book class and adding RentalDueDate and BookmarkPage
-    -Upgrade your Validation class by adding the newer validation functions.
-    -Upgrade the validation within the Book and EBook "sets" and add Errors to the class' Feedback property.
-    -If there are Errors, display the error messages.  If there are No Errors, display the data you entered in your Feedback Label.
-    -Test it a few times making sure only valid data is being printed.*/
-
     class Ebook: Book
     {
-        private DateTime rentalDueDate;
-        private int bookmarkPg;
+        private DateTime dateRentalExpires;
+        private int bookmarkPage;
 
-        public DateTime RentalDueDate
+        public DateTime DateRentalExpires
         {
             get
             {
-                return rentalDueDate;
+                return dateRentalExpires;
             }
 
             set
             {
                 if (ValidationLibrary.IsAFutureDate(value))
                 {
-                    rentalDueDate = value;
+                    dateRentalExpires = value;
                 }
                 else
                 {
@@ -40,18 +34,18 @@ namespace week5_class
             }
         }
 
-        public int BookmarkPg
+        public int BookmarkPage
         {
             get
             {
-                return bookmarkPg;
+                return bookmarkPage;
             }
 
             set
             {
                 if (value >= 0 && value <= Pages)
                 {
-                    bookmarkPg = value;
+                    bookmarkPage = value;
                 }
                 else
                 {
@@ -60,10 +54,53 @@ namespace week5_class
             }
         }
 
+        public string AddARecord()
+        {
+            string strResult = ""; //init string
+
+            SqlConnection Conn = new SqlConnection(); //make connection obj
+
+
+            //init properties
+            Conn.ConnectionString = @"Server=sql.neit.edu\studentsqlserver,4500;Database=SE133_SOquendo;UserId=SE133_SOquendo;Password=008016420;";
+
+            string strSQL = "INSERT INTO EBooks (Title, AuthorFirst, AuthorLast, Email, Pages, DatePublished, DateRentalExpires, BookmarkPage) VALUES(@Title, @AuthorFirst, @AuthorLast, @Email, @Pages, @DatePublished, @DateRentalExpires, @BookmarkPage)";
+
+            SqlCommand comm = new SqlCommand(); //bark command
+            comm.CommandText = strSQL;          //commander knows what to say
+            comm.Connection = Conn;             //here's the phone
+
+            //write parameterse in same sequence as sql statement
+            comm.Parameters.AddWithValue("@Title", Title);
+            comm.Parameters.AddWithValue("@AuthorFirst", AuthorFirst);
+            comm.Parameters.AddWithValue("@AuthorLast", AuthorLast);
+            comm.Parameters.AddWithValue("@Email", Email);
+            comm.Parameters.AddWithValue("@Pages", Pages);
+            comm.Parameters.AddWithValue("@DatePublished", DatePublished);
+            comm.Parameters.AddWithValue("@DateRentalExpires", DateRentalExpires);
+            comm.Parameters.AddWithValue("@BookmarkPage", BookmarkPage);
+
+            try
+            {
+                Conn.Open();
+
+
+
+            }
+
+
+
+
+        }
+
+
+
+
+
         public Ebook(): base ()
         {
-            BookmarkPg = 0;
-            rentalDueDate = DateTime.Now.AddDays(14);
+            BookmarkPage = 0;
+            DateRentalExpires = DateTime.Now.AddDays(14);
         }
 
     }

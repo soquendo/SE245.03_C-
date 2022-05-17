@@ -20,9 +20,13 @@ namespace midterm_oquendo
 
             set
             {
-                if (ValidationLibrary.IsItNum(value) == false)
+                if (ValidationLibrary.IsItFilledPhone(value) == false)
                 {
                     Feedback += "\nERROR: Please enter only digits (Ex. 4015551234)";
+                }
+                if (ValidationLibrary.IsItNum(value) == false)
+                {
+                    Feedback += "\nERROR: Please enter 10 digit number (Ex. 02861);
                 }
                 else 
                 {

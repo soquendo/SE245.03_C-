@@ -142,13 +142,17 @@ namespace midterm_oquendo
 
             set
             {
-                if (ValidationLibrary.IsItFilledZip(value))
+                if (ValidationLibrary.IsItFilledZip(value) == false)
                 {
-                    zipCode = value;
+                    Feedback += "\nERROR: Please enter 5 digit number (Ex. 02861)";
+                }
+                if (ValidationLibrary.IsItNum(value) == false)
+                {
+                    Feedback += "\nERROR: Please enter 10 digit number (Ex. 02861)";
                 }
                 else
                 {
-                    Feedback = "ERROR: Enter 5-digit zip code ex. 02861";
+                    zipCode = value;
                 }
 
             }
@@ -163,6 +167,10 @@ namespace midterm_oquendo
 
             set
             {
+                if (ValidationLibrary.IsItFilledPhone(value) == false)
+                {
+                    Feedback += "\nERROR: Please enter only digits (Ex. 4015551234)";
+                }
                 if (ValidationLibrary.IsItNum(value) == false)
                 {
                     Feedback += "\nERROR: Please enter only digits (Ex. 4015551234)";

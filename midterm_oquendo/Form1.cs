@@ -21,6 +21,7 @@ namespace midterm_oquendo
         {
             txt_feedback.Text = "";
             PersonV2 temp = new PersonV2();
+            /*Customer temp = new Customer();*/
             
             temp.fname = txt_fname.Text;
             temp.mname = txt_mname.Text;

@@ -17,7 +17,7 @@ namespace week5_class
             //retrieves from the parent
             InitializeComponent();
 
-            dtpRentalDueDate.Value = DateTime.Now.AddDays(14);
+            dtpDateRentalExpires.Value = DateTime.Now.AddDays(14);
         }
 
         private void lblFeedback_Click(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace week5_class
             temp.Email = txtEmail.Text;
 
             temp.DatePublished = dtpDatePublished.Value;
-            temp.RentalDueDate = dtpRentalDueDate.Value;
+            temp.DateRentalExpires = dtpDateRentalExpires.Value;
 
             int intTempPages;
             bool blnResult = Int32.TryParse(txtPages.Text, out intTempPages);
@@ -71,7 +71,7 @@ namespace week5_class
             }
             else
             {
-                temp.BookmarkPg = intBMPage;
+                temp.BookmarkPage = intBMPage;
             }
 
 
@@ -100,7 +100,7 @@ namespace week5_class
             }
             else
             {
-                lblFeedback.Text = $"{temp.Title}, published {temp.DatePublished} by {temp.AuthorFirst} {temp.AuthorLast} costs ${temp.Price}; Rental expires {temp.RentalDueDate}";
+                lblFeedback.Text = $"{temp.Title}, published {temp.DatePublished} by {temp.AuthorFirst} {temp.AuthorLast} costs ${temp.Price}; Rental expires {temp.DateRentalExpires}";
             }
 
         }
@@ -134,6 +134,11 @@ namespace week5_class
         }
 
         private void lblTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblReturn_Click(object sender, EventArgs e)
         {
 
         }
