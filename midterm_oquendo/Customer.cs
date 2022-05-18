@@ -66,6 +66,14 @@ namespace midterm_oquendo
             }
         }
 
+        public Customer() : base()
+        {
+            CustomerSince = DateTime.Now;
+            TotalPurchases = 0;
+            DiscountMember = false;
+            RewardsEarned = 0;
+
+        }
 
     }
 }

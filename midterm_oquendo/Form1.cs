@@ -20,8 +20,7 @@ namespace midterm_oquendo
         private void submit_button_Click(object sender, EventArgs e)
         {
             txt_feedback.Text = "";
-            PersonV2 temp = new PersonV2();
-            /*Customer temp = new Customer();*/
+            Customer temp = new Customer();
             
             temp.fname = txt_fname.Text;
             temp.mname = txt_mname.Text;
@@ -36,7 +35,36 @@ namespace midterm_oquendo
 
             temp.Cellphone = txt_cellphone.Text;
             temp.IG = txt_Instagram.Text;
-            
+
+            temp.CustomerSince = dtpCustomerSince.Value;
+            //temp.TotalPurchases = txt_TotalPurchases.Text; //double
+            //temp.DiscountMember = ck_DiscountMember.Value; //bool
+            //temp.RewardsEarned = txt_RewardsEarned.Text; //int
+
+
+            double dblTempTotalPurch;
+            if (double.TryParse(txt_TotalPurchases.Text, out dblTempTotalPurch) == true)
+            {
+                temp.TotalPurchases = dblTempTotalPurch;
+            }
+            else
+            {
+                txt_feedback.Text += "ERROR: Please enter dollar value (Ex. 114.99)";
+            }
+
+
+            bool blnResult;
+            int intRewardsEarned;
+            blnResult = Int32.TryParse(txt_RewardsEarned.Text, out intRewardsEarned);
+            if (blnResult == false)
+            {
+                txt_feedback.Text += "ERROR: Please enter total rewards points (Ex. 132)";
+            }
+            else
+            {
+                temp.RewardsEarned = intRewardsEarned;
+            }
+
 
             if (temp.Feedback.Contains("ERROR:"))
             {
@@ -44,7 +72,7 @@ namespace midterm_oquendo
             }
             else
             {
-                txt_feedback.Text = "First Name: " + temp.fname + "\nMiddle Name: " + temp.mname + "\nLast Name: " + temp.lname + "\nAddress Line #1: " + temp.Street1 + "\nAddress Line #2: " + temp.Street2 + "\nCity: " + temp.City + "\nState: " + temp.State + "\nZip Code: " + temp.Zipcode + "\nPhone Number: " + temp.Phone + "\nCell Phone: " + temp.Cellphone + "\nE-Mail: " + temp.Email + "\nInstagram: " + temp.IG;
+                txt_feedback.Text = "First Name: " + temp.fname + "\tMiddle Name: " + temp.mname + "\tLast Name: " + temp.lname + "\nAddress Line #1: " + temp.Street1 + "\tAddress Line #2: " + temp.Street2 + "\tCity: " + temp.City + "\tState: " + temp.State + "\nZip Code: " + temp.Zipcode + "\tPhone Number: " + temp.Phone + "\nCell Phone: " + temp.Cellphone + "\tE-Mail: " + temp.Email + "\nInstagram: " + temp.IG;
             }
 
 
@@ -61,6 +89,21 @@ namespace midterm_oquendo
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
         }

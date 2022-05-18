@@ -127,7 +127,7 @@ namespace midterm_oquendo
                 
                 else
                 {
-                    Feedback = "ERROR: Enter two-character state abbreviation ex. NY, MT, WA";
+                    Feedback = "ERROR: Enter two-character state abbreviation (Ex. NY, MT, WA)";
                 }
 
             }
@@ -148,7 +148,7 @@ namespace midterm_oquendo
                 }
                 if (ValidationLibrary.IsItNum(value) == false)
                 {
-                    Feedback += "\nERROR: Please enter 10 digit number (Ex. 02861)";
+                    Feedback += "\nERROR: Please enter 5 digit number (Ex. 02861)";
                 }
                 else
                 {
