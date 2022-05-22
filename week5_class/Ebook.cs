@@ -57,14 +57,13 @@ namespace week5_class
         public string AddARecord()
         {
             string strResult = ""; //init string
-
             SqlConnection Conn = new SqlConnection(); //make connection obj
 
 
             //init properties
             Conn.ConnectionString = @"Server=sql.neit.edu\studentsqlserver,4500;Database=SE133_SOquendo;UserId=SE133_SOquendo;Password=008016420;";
 
-            string strSQL = "INSERT INTO EBooks (Title, AuthorFirst, AuthorLast, Email, Pages, DatePublished, DateRentalExpires, BookmarkPage) VALUES(@Title, @AuthorFirst, @AuthorLast, @Email, @Pages, @DatePublished, @DateRentalExpires, @BookmarkPage)";
+            string strSQL = "INSERT INTO EBooks (Title, AuthorFirst, AuthorLast, Email, Pages, DatePublished, DateRentalExpires, BookmarkPage) VALUES (@Title, @AuthorFirst, @AuthorLast, @Email, @Pages, @DatePublished, @DateRentalExpires, @BookmarkPage)";
 
             SqlCommand comm = new SqlCommand(); //bark command
             comm.CommandText = strSQL;          //commander knows what to say
@@ -83,19 +82,24 @@ namespace week5_class
             try
             {
                 Conn.Open();
+                int intRecs = comm.ExecuteNonQuery();
+                strResult = $"SUCCESS: Inserted {intRecs} records.";
+                Conn.Close();
 
-
+            }
+            catch (Exception err) //if we arrive at this point, there was prob connecting to db
+            {
+                strResult = "ERROR: " + err.Message;
+            }
+            finally
+            {
 
             }
 
 
-
+            return strResult;
 
         }
-
-
-
-
 
         public Ebook(): base ()
         {
