@@ -75,7 +75,8 @@ namespace midterm_oquendo
             }
             else
             {
-                txt_feedback.Text = "\nFirst Name: " + temp.fname + "\nMiddle Name: " + temp.mname + "\nLast Name: " + temp.lname + "\nAddress Line #1: " + temp.Street1 + "\nAddress Line #2: " + temp.Street2 + "\nCity: " + temp.City + "\nState: " + temp.State + "\nZip Code: " + temp.Zipcode + "\nPhone Number: " + temp.Phone + "\nCell Phone: " + temp.Cellphone + "\nE-Mail: " + temp.Email + "\nInstagram: " + temp.IG;
+                txt_feedback.Text = temp.AddARecord();
+                //txt_feedback.Text = "\nFirst Name: " + temp.fname + "\nMiddle Name: " + temp.mname + "\nLast Name: " + temp.lname + "\nAddress Line #1: " + temp.Street1 + "\nAddress Line #2: " + temp.Street2 + "\nCity: " + temp.City + "\nState: " + temp.State + "\nZip Code: " + temp.Zipcode + "\nPhone Number: " + temp.Phone + "\nCell Phone: " + temp.Cellphone + "\nE-Mail: " + temp.Email + "\nInstagram: " + temp.IG;
             }
 
 
@@ -125,8 +126,7 @@ namespace midterm_oquendo
             txt_email.Text = "JohnDoe@aol.com";
             txt_cellphone.Text = "4012228888";
             txt_Instagram.Text = "instagram.com/JohnDoe";
-            txt_TotalPurchases.Text = "2";
-            txt_RewardsEarned.Text = "1";
+            
         }
     }
 }

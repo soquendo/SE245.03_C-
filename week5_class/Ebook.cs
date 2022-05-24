@@ -61,9 +61,9 @@ namespace week5_class
 
 
             //init properties
-            Conn.ConnectionString = @"Server=sql.neit.edu\studentsqlserver,4500;Database=SE133_SOquendo;UserId=SE133_SOquendo;Password=008016420;";
+            Conn.ConnectionString = @"Server=sql.neit.edu\studentsqlserver,4500;Database=SE133_SOquendo;User ID=SE133_SOquendo;Password=008016420;";
 
-            string strSQL = "INSERT INTO EBooks (Title, AuthorFirst, AuthorLast, Email, Pages, DatePublished, DateRentalExpires, BookmarkPage) VALUES (@Title, @AuthorFirst, @AuthorLast, @Email, @Pages, @DatePublished, @DateRentalExpires, @BookmarkPage)";
+            string strSQL = "INSERT INTO EBooks (Title, AuthorFirst, AuthorLast, Email, Pages, DatePublished, DateRentalExpires, Price, BookmarkPage) VALUES (@Title, @AuthorFirst, @AuthorLast, @Email, @Pages, @DatePublished, @DateRentalExpires, @Price, @BookmarkPage)";
 
             SqlCommand comm = new SqlCommand(); //bark command
             comm.CommandText = strSQL;          //commander knows what to say
@@ -77,6 +77,7 @@ namespace week5_class
             comm.Parameters.AddWithValue("@Pages", Pages);
             comm.Parameters.AddWithValue("@DatePublished", DatePublished);
             comm.Parameters.AddWithValue("@DateRentalExpires", DateRentalExpires);
+            comm.Parameters.AddWithValue("@Price", Price);
             comm.Parameters.AddWithValue("@BookmarkPage", BookmarkPage);
 
             try

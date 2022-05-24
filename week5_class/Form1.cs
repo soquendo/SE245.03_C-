@@ -74,8 +74,6 @@ namespace week5_class
                 temp.BookmarkPage = intBMPage;
             }
 
-
-
             //temp.Price = txtPrice.Text;
             double tPrice = 0;
             
@@ -100,7 +98,8 @@ namespace week5_class
             }
             else
             {
-                lblFeedback.Text = $"{temp.Title}, published {temp.DatePublished} by {temp.AuthorFirst} {temp.AuthorLast} costs ${temp.Price}; Rental expires {temp.DateRentalExpires}";
+                lblFeedback.Text = temp.AddARecord();
+               //lblFeedback.Text = $"{temp.Title}, published {temp.DatePublished} by {temp.AuthorFirst} {temp.AuthorLast} costs ${temp.Price}; Rental expires {temp.DateRentalExpires}";
             }
 
         }
