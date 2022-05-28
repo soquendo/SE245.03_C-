@@ -31,9 +31,9 @@ namespace lab6_oquendo
         {
             string strSearchResult = dgvResults.Rows[e.RowIndex].Cells[0].Value.ToString();
 
-            int intSearchResultID = Convert.ToInt32(strSearchResult);
+            int intPersonID = Convert.ToInt32(strSearchResult);
 
-            Form1 Editor = new Form1(intSearchResultID);
+            Form1 Editor = new Form1(intPersonID);
             Editor.ShowDialog();
 
         }

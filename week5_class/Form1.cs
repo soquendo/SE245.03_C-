@@ -21,12 +21,20 @@ namespace week5_class
         public Form1()
         {
             InitializeComponent();
+            btnUpdate.Enabled = false;
+            btnUpdate.Visible = false;
+            btnDelete.Enabled = false;
+            btnDelete.Visible = false;
+
         }
 
         public Form1(int intEBook_ID)
         {
             //retrieves from the parent
             InitializeComponent();
+
+            btnAddBook.Enabled = false;
+            btnAddBook.Visible = false;
 
             Ebook temp = new Ebook();
             SqlDataReader dr = temp.FindOneEBook(intEBook_ID);
@@ -139,6 +147,27 @@ namespace week5_class
 
         }
 
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+
+
+
+        /// <summary>
+        /// Form code to create an oject and call it's update method
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -175,6 +204,78 @@ namespace week5_class
         private void lblReturn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnUpdate_Click_1(object sender, EventArgs e)
+        {
+            Ebook temp = new Ebook();
+
+            //Getting the strings from the form and setting them in object
+            temp.Title = txtTitle.Text;
+            temp.AuthorFirst = txtAuthorFirst.Text;
+            temp.AuthorLast = txtAuthorLast.Text;
+            temp.Email = txtEmail.Text;
+            temp.EBook_ID = Convert.ToInt32(lblEBook_ID.Text);
+
+
+            //Getting te dates from the datetime pickers
+            temp.DatePublished = dtpDatePublished.Value;
+            temp.DateRentalExpires = dtpDateRentalExpires.Value;
+
+            //**************************************************************************
+            //get the string from page # textboxes,convert to ints, set their values
+            //**************************************************************************
+            int intTempPages;
+            bool blnResult = Int32.TryParse(Console.ReadLine(), out intTempPages);
+
+            if (blnResult == false)
+            {
+                lblFeedback.Text += "Sorry incorrect page #.  Please try again. (Ex: 214) ";
+            }
+            else
+            {
+                temp.Pages = intTempPages;
+            }
+            //**************************************************************************
+
+
+            //**************************************************************************
+            //get the string from Bookmark page # textboxes,convert to ints, set their values
+            //**************************************************************************
+            int intBMPage;
+            blnResult = Int32.TryParse(Console.ReadLine(), out intBMPage);
+
+            if (blnResult == false)
+            {
+                lblFeedback.Text += "Sorry incorrect Bookmark page #.  Please try again. (Ex: 214) ";
+            }
+            else
+            {
+                temp.BookmarkPage = intBMPage;
+            }
+            //**************************************************************************
+
+
+            if (!temp.Feedback.Contains("ERROR:"))
+            {
+                lblFeedback.Text = temp.UpdateARecord();   //if no errors weh setting values, then perform the insertion into db
+            }
+            else
+            {
+                lblFeedback.Text = temp.Feedback;       //else...dispay the error msg
+            }
+        }
+
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            Int32 intEBook_ID = Convert.ToInt32(lblEBook_ID.Text);  //Get the ID from the Label
+
+            //Create a EBook so we can use the delete method
+            Ebook temp = new Ebook();
+
+            //Use the EBook ID and pass it to the delete function
+            // and get the number of records deleted
+            lblFeedback.Text = temp.DeleteOneEBook(intEBook_ID);
         }
     }
 }

@@ -16,11 +16,22 @@ namespace lab6_oquendo
         public Form1()
         {
             InitializeComponent();
+            btnUpdate.Enabled = false;
+            btnDelete.Enabled = false;
+            btnUpdate.Visible = false;
+            btnDelete.Visible = false;
+
+            lbl_PersonID.Visible = false;
+
         }
 
         public Form1(Int32 intPersonID)
         {
             InitializeComponent();
+
+            btnAddInfo.Enabled = false;
+            btnAddInfo.Visible = false;
+
             PersonV2 temp = new PersonV2();
 
             SqlDataReader dr = temp.FindOnePerson(intPersonID);
@@ -39,6 +50,7 @@ namespace lab6_oquendo
                 txt_email.Text = dr["Email"].ToString();
                 txt_cellphone.Text = dr["Cellphone"].ToString();
                 txt_Instagram.Text = dr["IG"].ToString();
+                lbl_PersonID.Text = dr["PersonID"].ToString();
 
             }
         }
@@ -46,7 +58,11 @@ namespace lab6_oquendo
 
         private void submit_button_Click(object sender, EventArgs e)
         {
-            txt_feedback.Text = "";
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
             PersonV2 temp = new PersonV2();
 
             temp.fname = txt_fname.Text;
@@ -62,53 +78,26 @@ namespace lab6_oquendo
 
             temp.Cellphone = txt_cellphone.Text;
             temp.IG = txt_Instagram.Text;
+            temp.PersonID = Convert.ToInt32(lbl_PersonID.Text);
 
-
-
-            //temp.CustomerSince = dtpCustomerSince.Value;
-            //temp.TotalPurchases = txt_TotalPurchases.Text; //double
-            //temp.DiscountMember = ck_DiscountMember.Value; //bool
-            //temp.RewardsEarned = txt_RewardsEarned.Text; //int
-
-
-            //double dblTempTotalPurch;
-            //if (double.TryParse(txt_TotalPurchases.Text, out dblTempTotalPurch) == true)
-            //{
-            //    temp.TotalPurchases = dblTempTotalPurch;
-            //}
-            //else
-            //{
-            //    txt_feedback.Text += "\nERROR: Please enter dollar value (Ex. 114.99)";
-            //}
-
-
-            //bool blnResult;
-            //int intRewardsEarned;
-            //blnResult = Int32.TryParse(txt_RewardsEarned.Text, out intRewardsEarned);
-            //if (blnResult == false)
-            //{
-            //    txt_feedback.Text += "\nERROR: Please enter total rewards points (Ex. 132)";
-            //}
-            //else
-            //{
-            //    temp.RewardsEarned = intRewardsEarned;
-            //}
-
-            if (txt_feedback.Text.Contains("ERROR:"))
+            if (!temp.Feedback.Contains("ERROR:"))
             {
-
-            }
-            else if (temp.Feedback.Contains("ERROR:"))
-            {
-                txt_feedback.Text = temp.Feedback;
+                txt_feedback.Text = temp.UpdateARecord();
             }
             else
             {
-                txt_feedback.Text = temp.AddARecord();
-                //txt_feedback.Text = "\nFirst Name: " + temp.fname + "\nMiddle Name: " + temp.mname + "\nLast Name: " + temp.lname + "\nAddress Line #1: " + temp.Street1 + "\nAddress Line #2: " + temp.Street2 + "\nCity: " + temp.City + "\nState: " + temp.State + "\nZip Code: " + temp.Zipcode + "\nPhone Number: " + temp.Phone + "\nCell Phone: " + temp.Cellphone + "\nE-Mail: " + temp.Email + "\nInstagram: " + temp.IG;
+                txt_feedback.Text = temp.Feedback;
             }
 
+        }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Int32 intPersonID = Convert.ToInt32(lbl_PersonID.Text);
+
+            PersonV2 temp = new PersonV2();
+
+            txt_feedback.Text = temp.DeleteOnePerson(intPersonID);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -143,7 +132,7 @@ namespace lab6_oquendo
 
         private void sample_Click(object sender, EventArgs e)
         {
-            txt_fname.Text = "John";
+            txt_fname.Text = "Jared";
             txt_mname.Text = "A";
             txt_lname.Text = "Doe";
             txt_street1.Text = "10 Main St";
@@ -152,10 +141,52 @@ namespace lab6_oquendo
             txt_state.Text = "RI";
             txt_zipcode.Text = "02903";
             txt_phone.Text = "4015559999";
-            txt_email.Text = "JohnDoe@aol.com";
+            txt_email.Text = "JDoe@aol.com";
             txt_cellphone.Text = "4012228888";
-            txt_Instagram.Text = "instagram.com/JohnDoe";
+            txt_Instagram.Text = "instagram.com/JDoe";
 
         }
+
+        private void btnAddInfo_Click(object sender, EventArgs e)
+        {
+
+            txt_feedback.Text = "";
+
+            PersonV2 temp = new PersonV2();
+
+            temp.fname = txt_fname.Text;
+            temp.mname = txt_mname.Text;
+            temp.lname = txt_lname.Text;
+            temp.Street1 = txt_street1.Text;
+            temp.Street2 = txt_street2.Text;
+            temp.City = txt_city.Text;
+            temp.State = txt_state.Text;
+            temp.Zipcode = txt_zipcode.Text;
+            temp.Phone = txt_phone.Text;
+            temp.Email = txt_email.Text;
+
+            temp.Cellphone = txt_cellphone.Text;
+            temp.IG = txt_Instagram.Text;
+            temp.PersonID = Convert.ToInt32(lbl_PersonID.Text);
+
+
+            if (txt_feedback.Text.Contains("ERROR:"))
+            {
+                //Do nothing... already posted error msg on the form
+            }
+            else if (temp.Feedback.Contains("ERROR:"))
+            {
+                txt_feedback.Text = temp.Feedback;
+            }
+            else
+            {
+                txt_feedback.Text = temp.AddARecord();
+                //lblFeedback.Text = $"Name: {temp.Fname} {temp.Mname} {temp.Lname}\nStreet 1: {temp.Street1}\nStreet 2: {temp.Street2}\nCity: {temp.City}\nState: {temp.State}\nZip Code: {temp.Zip}\nPhone #: {temp.Pnum}\nEmail: {temp.Email} \nCell #: {temp.CellPhone} \nInstagram: {temp.IgURL}";
+            }
+
+        }
+
+
+
     }
 }

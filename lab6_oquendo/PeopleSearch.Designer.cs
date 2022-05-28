@@ -106,6 +106,7 @@ namespace lab6_oquendo
             this.dgvResults.Size = new System.Drawing.Size(1332, 575);
             this.dgvResults.TabIndex = 2;
             this.dgvResults.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResults_CellContentClick);
+            this.dgvResults.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResults_CellContentClick);
             // 
             // btnSearch
             // 

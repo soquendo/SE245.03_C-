@@ -49,7 +49,6 @@ namespace lab6_oquendo
             this.txt_zipcode = new System.Windows.Forms.TextBox();
             this.txt_phone = new System.Windows.Forms.TextBox();
             this.txt_email = new System.Windows.Forms.TextBox();
-            this.submit_button = new System.Windows.Forms.Button();
             this.lbl_title = new System.Windows.Forms.Label();
             this.txt_feedback = new System.Windows.Forms.Label();
             this.lbl_instagram = new System.Windows.Forms.Label();
@@ -57,13 +56,17 @@ namespace lab6_oquendo
             this.txt_Instagram = new System.Windows.Forms.TextBox();
             this.txt_cellphone = new System.Windows.Forms.TextBox();
             this.sample = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.lbl_PersonID = new System.Windows.Forms.Label();
+            this.btnAddInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_fname
             // 
             this.lbl_fname.AutoSize = true;
             this.lbl_fname.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fname.Location = new System.Drawing.Point(165, 142);
+            this.lbl_fname.Location = new System.Drawing.Point(202, 207);
             this.lbl_fname.Name = "lbl_fname";
             this.lbl_fname.Size = new System.Drawing.Size(147, 30);
             this.lbl_fname.TabIndex = 0;
@@ -73,7 +76,7 @@ namespace lab6_oquendo
             // 
             this.lbl_mname.AutoSize = true;
             this.lbl_mname.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mname.Location = new System.Drawing.Point(166, 203);
+            this.lbl_mname.Location = new System.Drawing.Point(203, 268);
             this.lbl_mname.Name = "lbl_mname";
             this.lbl_mname.Size = new System.Drawing.Size(172, 30);
             this.lbl_mname.TabIndex = 1;
@@ -83,7 +86,7 @@ namespace lab6_oquendo
             // 
             this.lbl_lname.AutoSize = true;
             this.lbl_lname.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_lname.Location = new System.Drawing.Point(166, 271);
+            this.lbl_lname.Location = new System.Drawing.Point(203, 336);
             this.lbl_lname.Name = "lbl_lname";
             this.lbl_lname.Size = new System.Drawing.Size(144, 30);
             this.lbl_lname.TabIndex = 2;
@@ -93,7 +96,7 @@ namespace lab6_oquendo
             // 
             this.lbl_street1.AutoSize = true;
             this.lbl_street1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_street1.Location = new System.Drawing.Point(123, 340);
+            this.lbl_street1.Location = new System.Drawing.Point(160, 405);
             this.lbl_street1.Name = "lbl_street1";
             this.lbl_street1.Size = new System.Drawing.Size(265, 30);
             this.lbl_street1.TabIndex = 3;
@@ -103,7 +106,7 @@ namespace lab6_oquendo
             // 
             this.lbl_street2.AutoSize = true;
             this.lbl_street2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_street2.Location = new System.Drawing.Point(123, 403);
+            this.lbl_street2.Location = new System.Drawing.Point(160, 468);
             this.lbl_street2.Name = "lbl_street2";
             this.lbl_street2.Size = new System.Drawing.Size(265, 30);
             this.lbl_street2.TabIndex = 4;
@@ -113,7 +116,7 @@ namespace lab6_oquendo
             // 
             this.lbl_city.AutoSize = true;
             this.lbl_city.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_city.Location = new System.Drawing.Point(956, 142);
+            this.lbl_city.Location = new System.Drawing.Point(993, 207);
             this.lbl_city.Name = "lbl_city";
             this.lbl_city.Size = new System.Drawing.Size(65, 30);
             this.lbl_city.TabIndex = 5;
@@ -123,7 +126,7 @@ namespace lab6_oquendo
             // 
             this.lbl_state.AutoSize = true;
             this.lbl_state.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_state.Location = new System.Drawing.Point(956, 211);
+            this.lbl_state.Location = new System.Drawing.Point(993, 276);
             this.lbl_state.Name = "lbl_state";
             this.lbl_state.Size = new System.Drawing.Size(79, 30);
             this.lbl_state.TabIndex = 6;
@@ -133,7 +136,7 @@ namespace lab6_oquendo
             // 
             this.lbl_zipcode.AutoSize = true;
             this.lbl_zipcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_zipcode.Location = new System.Drawing.Point(956, 277);
+            this.lbl_zipcode.Location = new System.Drawing.Point(993, 342);
             this.lbl_zipcode.Name = "lbl_zipcode";
             this.lbl_zipcode.Size = new System.Drawing.Size(124, 30);
             this.lbl_zipcode.TabIndex = 7;
@@ -143,7 +146,7 @@ namespace lab6_oquendo
             // 
             this.lbl_phone.AutoSize = true;
             this.lbl_phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_phone.Location = new System.Drawing.Point(956, 340);
+            this.lbl_phone.Location = new System.Drawing.Point(993, 405);
             this.lbl_phone.Name = "lbl_phone";
             this.lbl_phone.Size = new System.Drawing.Size(192, 30);
             this.lbl_phone.TabIndex = 8;
@@ -153,7 +156,7 @@ namespace lab6_oquendo
             // 
             this.lbl_email.AutoSize = true;
             this.lbl_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_email.Location = new System.Drawing.Point(270, 458);
+            this.lbl_email.Location = new System.Drawing.Point(307, 523);
             this.lbl_email.Name = "lbl_email";
             this.lbl_email.Size = new System.Drawing.Size(94, 30);
             this.lbl_email.TabIndex = 9;
@@ -162,7 +165,7 @@ namespace lab6_oquendo
             // txt_fname
             // 
             this.txt_fname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_fname.Location = new System.Drawing.Point(345, 146);
+            this.txt_fname.Location = new System.Drawing.Point(382, 211);
             this.txt_fname.Name = "txt_fname";
             this.txt_fname.Size = new System.Drawing.Size(511, 32);
             this.txt_fname.TabIndex = 10;
@@ -170,7 +173,7 @@ namespace lab6_oquendo
             // txt_mname
             // 
             this.txt_mname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_mname.Location = new System.Drawing.Point(345, 208);
+            this.txt_mname.Location = new System.Drawing.Point(382, 273);
             this.txt_mname.Name = "txt_mname";
             this.txt_mname.Size = new System.Drawing.Size(511, 32);
             this.txt_mname.TabIndex = 11;
@@ -178,7 +181,7 @@ namespace lab6_oquendo
             // txt_lname
             // 
             this.txt_lname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_lname.Location = new System.Drawing.Point(345, 274);
+            this.txt_lname.Location = new System.Drawing.Point(382, 339);
             this.txt_lname.Name = "txt_lname";
             this.txt_lname.Size = new System.Drawing.Size(511, 32);
             this.txt_lname.TabIndex = 12;
@@ -186,7 +189,7 @@ namespace lab6_oquendo
             // txt_street1
             // 
             this.txt_street1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_street1.Location = new System.Drawing.Point(422, 340);
+            this.txt_street1.Location = new System.Drawing.Point(459, 405);
             this.txt_street1.Name = "txt_street1";
             this.txt_street1.Size = new System.Drawing.Size(434, 32);
             this.txt_street1.TabIndex = 13;
@@ -194,7 +197,7 @@ namespace lab6_oquendo
             // txt_street2
             // 
             this.txt_street2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_street2.Location = new System.Drawing.Point(422, 403);
+            this.txt_street2.Location = new System.Drawing.Point(459, 468);
             this.txt_street2.Name = "txt_street2";
             this.txt_street2.Size = new System.Drawing.Size(434, 32);
             this.txt_street2.TabIndex = 14;
@@ -202,7 +205,7 @@ namespace lab6_oquendo
             // txt_city
             // 
             this.txt_city.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_city.Location = new System.Drawing.Point(1042, 142);
+            this.txt_city.Location = new System.Drawing.Point(1079, 207);
             this.txt_city.Name = "txt_city";
             this.txt_city.Size = new System.Drawing.Size(394, 32);
             this.txt_city.TabIndex = 18;
@@ -210,7 +213,7 @@ namespace lab6_oquendo
             // txt_state
             // 
             this.txt_state.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_state.Location = new System.Drawing.Point(1042, 208);
+            this.txt_state.Location = new System.Drawing.Point(1079, 273);
             this.txt_state.Name = "txt_state";
             this.txt_state.Size = new System.Drawing.Size(394, 32);
             this.txt_state.TabIndex = 19;
@@ -218,7 +221,7 @@ namespace lab6_oquendo
             // txt_zipcode
             // 
             this.txt_zipcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_zipcode.Location = new System.Drawing.Point(1188, 277);
+            this.txt_zipcode.Location = new System.Drawing.Point(1225, 342);
             this.txt_zipcode.Name = "txt_zipcode";
             this.txt_zipcode.Size = new System.Drawing.Size(248, 32);
             this.txt_zipcode.TabIndex = 20;
@@ -226,7 +229,7 @@ namespace lab6_oquendo
             // txt_phone
             // 
             this.txt_phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_phone.Location = new System.Drawing.Point(1186, 340);
+            this.txt_phone.Location = new System.Drawing.Point(1223, 405);
             this.txt_phone.Name = "txt_phone";
             this.txt_phone.Size = new System.Drawing.Size(250, 32);
             this.txt_phone.TabIndex = 21;
@@ -234,27 +237,16 @@ namespace lab6_oquendo
             // txt_email
             // 
             this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_email.Location = new System.Drawing.Point(422, 455);
+            this.txt_email.Location = new System.Drawing.Point(459, 520);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(328, 32);
             this.txt_email.TabIndex = 24;
-            // 
-            // submit_button
-            // 
-            this.submit_button.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submit_button.Location = new System.Drawing.Point(768, 649);
-            this.submit_button.Name = "submit_button";
-            this.submit_button.Size = new System.Drawing.Size(183, 46);
-            this.submit_button.TabIndex = 26;
-            this.submit_button.Text = "Submit";
-            this.submit_button.UseVisualStyleBackColor = true;
-            this.submit_button.Click += new System.EventHandler(this.submit_button_Click);
             // 
             // lbl_title
             // 
             this.lbl_title.AutoSize = true;
             this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title.Location = new System.Drawing.Point(98, 58);
+            this.lbl_title.Location = new System.Drawing.Point(135, 123);
             this.lbl_title.Name = "lbl_title";
             this.lbl_title.Size = new System.Drawing.Size(361, 46);
             this.lbl_title.TabIndex = 21;
@@ -264,7 +256,7 @@ namespace lab6_oquendo
             // 
             this.txt_feedback.AutoSize = true;
             this.txt_feedback.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_feedback.Location = new System.Drawing.Point(538, 755);
+            this.txt_feedback.Location = new System.Drawing.Point(575, 820);
             this.txt_feedback.Name = "txt_feedback";
             this.txt_feedback.Size = new System.Drawing.Size(186, 26);
             this.txt_feedback.TabIndex = 31;
@@ -275,7 +267,7 @@ namespace lab6_oquendo
             // 
             this.lbl_instagram.AutoSize = true;
             this.lbl_instagram.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_instagram.Location = new System.Drawing.Point(956, 458);
+            this.lbl_instagram.Location = new System.Drawing.Point(993, 523);
             this.lbl_instagram.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_instagram.Name = "lbl_instagram";
             this.lbl_instagram.Size = new System.Drawing.Size(133, 30);
@@ -287,7 +279,7 @@ namespace lab6_oquendo
             // 
             this.lbl_cellphone.AutoSize = true;
             this.lbl_cellphone.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cellphone.Location = new System.Drawing.Point(956, 403);
+            this.lbl_cellphone.Location = new System.Drawing.Point(993, 468);
             this.lbl_cellphone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_cellphone.Name = "lbl_cellphone";
             this.lbl_cellphone.Size = new System.Drawing.Size(145, 30);
@@ -297,7 +289,7 @@ namespace lab6_oquendo
             // txt_Instagram
             // 
             this.txt_Instagram.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Instagram.Location = new System.Drawing.Point(1186, 455);
+            this.txt_Instagram.Location = new System.Drawing.Point(1223, 520);
             this.txt_Instagram.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_Instagram.Name = "txt_Instagram";
             this.txt_Instagram.Size = new System.Drawing.Size(248, 32);
@@ -306,7 +298,7 @@ namespace lab6_oquendo
             // txt_cellphone
             // 
             this.txt_cellphone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cellphone.Location = new System.Drawing.Point(1186, 400);
+            this.txt_cellphone.Location = new System.Drawing.Point(1223, 465);
             this.txt_cellphone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_cellphone.Name = "txt_cellphone";
             this.txt_cellphone.Size = new System.Drawing.Size(248, 32);
@@ -314,7 +306,7 @@ namespace lab6_oquendo
             // 
             // sample
             // 
-            this.sample.Location = new System.Drawing.Point(1337, 650);
+            this.sample.Location = new System.Drawing.Point(1563, 34);
             this.sample.Name = "sample";
             this.sample.Size = new System.Drawing.Size(99, 46);
             this.sample.TabIndex = 36;
@@ -322,11 +314,56 @@ namespace lab6_oquendo
             this.sample.UseVisualStyleBackColor = true;
             this.sample.Click += new System.EventHandler(this.sample_Click);
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(842, 675);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(183, 75);
+            this.btnUpdate.TabIndex = 26;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.submit_button_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(1095, 675);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(183, 75);
+            this.btnDelete.TabIndex = 26;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.submit_button_Click);
+            // 
+            // lbl_PersonID
+            // 
+            this.lbl_PersonID.AutoSize = true;
+            this.lbl_PersonID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_PersonID.Location = new System.Drawing.Point(81, 47);
+            this.lbl_PersonID.Name = "lbl_PersonID";
+            this.lbl_PersonID.Size = new System.Drawing.Size(115, 26);
+            this.lbl_PersonID.TabIndex = 37;
+            this.lbl_PersonID.Text = "Person ID:";
+            // 
+            // btnAddInfo
+            // 
+            this.btnAddInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddInfo.Location = new System.Drawing.Point(580, 675);
+            this.btnAddInfo.Name = "btnAddInfo";
+            this.btnAddInfo.Size = new System.Drawing.Size(170, 75);
+            this.btnAddInfo.TabIndex = 38;
+            this.btnAddInfo.Text = "Add Info";
+            this.btnAddInfo.UseVisualStyleBackColor = true;
+            this.btnAddInfo.Click += new System.EventHandler(this.btnAddInfo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1692, 1040);
+            this.Controls.Add(this.btnAddInfo);
+            this.Controls.Add(this.lbl_PersonID);
             this.Controls.Add(this.sample);
             this.Controls.Add(this.txt_cellphone);
             this.Controls.Add(this.txt_Instagram);
@@ -334,7 +371,8 @@ namespace lab6_oquendo
             this.Controls.Add(this.lbl_instagram);
             this.Controls.Add(this.txt_feedback);
             this.Controls.Add(this.lbl_title);
-            this.Controls.Add(this.submit_button);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.txt_phone);
             this.Controls.Add(this.txt_zipcode);
@@ -384,7 +422,6 @@ namespace lab6_oquendo
         private System.Windows.Forms.TextBox txt_zipcode;
         private System.Windows.Forms.TextBox txt_phone;
         private System.Windows.Forms.TextBox txt_email;
-        private System.Windows.Forms.Button submit_button;
         private System.Windows.Forms.Label lbl_title;
         private System.Windows.Forms.Label txt_feedback;
         private System.Windows.Forms.TextBox txt_street2;
@@ -393,6 +430,10 @@ namespace lab6_oquendo
         private System.Windows.Forms.TextBox txt_Instagram;
         private System.Windows.Forms.TextBox txt_cellphone;
         private System.Windows.Forms.Button sample;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label lbl_PersonID;
+        private System.Windows.Forms.Button btnAddInfo;
     }
 }
 

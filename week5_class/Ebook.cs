@@ -12,6 +12,8 @@ namespace week5_class
     {
         private DateTime dateRentalExpires;
         private int bookmarkPage;
+        private int eBook_ID;
+
 
         public DateTime DateRentalExpires
         {
@@ -34,6 +36,23 @@ namespace week5_class
             }
         }
 
+        public Int32 EBook_ID
+        {
+            get { return eBook_ID; }
+
+            set
+            {
+                if (value >= 0)
+                {
+                    eBook_ID = value;
+                }
+                else
+                {
+                    feedback += "ERROR: You entered invalid EBook ID";
+                }
+            }
+        }
+
         public int BookmarkPage
         {
             get
@@ -53,6 +72,7 @@ namespace week5_class
                 }
             }
         }
+
 
         public string AddARecord()
         {
@@ -176,6 +196,117 @@ namespace week5_class
             return comm.ExecuteReader();   //return dataset to be used by others
 
         }
+
+        //Method that will delete one EBook record specified by the ID
+        //It will return an Interger meant for feedback on how many 
+        // records were deleted
+        public string DeleteOneEBook(int intEBook_ID)
+        {
+            Int32 intRecords = 0;
+            string strResult = "";
+
+            //Create and Initialize the DB Tools we need
+            SqlConnection conn = new SqlConnection();
+            SqlCommand comm = new SqlCommand();
+
+            //My Connection String
+            string strConn = GetConnected();
+
+            //My SQL command string to pull up one EBook's data
+            string sqlString =
+           "DELETE FROM EBooks WHERE EBook_ID = @EBook_ID;";
+
+            //Tell the connection object the who, what, where, how
+            conn.ConnectionString = strConn;
+
+            //Give the command object info it needs
+            comm.Connection = conn;
+            comm.CommandText = sqlString;
+            comm.Parameters.AddWithValue("@EBook_ID", intEBook_ID);
+
+            try
+            {
+                //Open the connection
+                conn.Open();
+
+                //Run the Delete and store the number of records effected
+                intRecords = comm.ExecuteNonQuery();
+                strResult = intRecords.ToString() + " Records Deleted.";
+            }
+            catch (Exception err)
+            {
+                strResult = "ERROR: " + err.Message;                //Set feedback to state there was an error & error info
+            }
+            finally
+            {
+                //close the connection
+                conn.Close();
+            }
+
+            return strResult;
+
+        }
+
+
+        /// <summary>
+        /// NEW - Method to Update a Record in the DB
+        /// </summary>
+        /// <returns></returns>
+        public string UpdateARecord()
+        {
+            Int32 intRecords = 0;
+            string strResult = "";
+
+            //Create SQL command string
+            string strSQL = "UPDATE EBooks SET Title = @Title, AuthorFirst = @AuthorFirst, AuthorLast = @AuthorLast, Email=@Email, Pages=@Pages, DatePublished=@DatePublished, DateRentalExpires=@DateRentalExpires, BookmarkPage=@BookmarkPage  WHERE EBook_ID = @EBook_ID;";
+
+            // Create a connection to DB
+            SqlConnection conn = new SqlConnection();
+            //Create the who, what where of the DB
+            string strConn = GetConnected();
+            conn.ConnectionString = strConn;
+
+            // Bark out our command
+            SqlCommand comm = new SqlCommand();
+            comm.CommandText = strSQL;  //Commander knows what to say
+            comm.Connection = conn;     //Where's the phone?  Here it is
+
+            //Fill in the paramters (Has to be created in same sequence as they are used in SQL Statement)
+            comm.Parameters.AddWithValue("@Title", Title);
+            comm.Parameters.AddWithValue("@AuthorFirst", AuthorFirst);
+            comm.Parameters.AddWithValue("@AuthorLast", AuthorLast);
+            comm.Parameters.AddWithValue("@Email", Email);
+            comm.Parameters.AddWithValue("@Pages", Pages);
+            comm.Parameters.AddWithValue("@DatePublished", DatePublished);
+            comm.Parameters.AddWithValue("@DateRentalExpires", DateRentalExpires);
+            comm.Parameters.AddWithValue("@BookmarkPage", BookmarkPage);
+            comm.Parameters.AddWithValue("@EBook_ID", EBook_ID);
+
+            try
+            {
+                //Open the connection
+                conn.Open();
+
+                //Run the Update and store the number of records effected
+                intRecords = comm.ExecuteNonQuery();
+                strResult = intRecords.ToString() + " Records Updated.";
+            }
+            catch (Exception err)
+            {
+                strResult = "ERROR: " + err.Message;                //Set feedback to state there was an error & error info
+            }
+            finally
+            {
+                //close the connection
+                conn.Close();
+            }
+
+            return strResult;
+
+        }
+
+
+
 
         //new utility function so that one string conrtols all sql server login info
         private string GetConnected()

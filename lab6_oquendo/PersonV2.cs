@@ -12,11 +12,28 @@ namespace lab6_oquendo
     {
         private string cellphone;
         private string instaURL;
+        private int personID;
 
         public PersonV2() : base()
         {
             cellphone = "";
             instaURL = "";
+        }
+
+        public int PersonID
+        {
+            get { return personID; }
+            set
+            {
+                if (value >= 0)
+                {
+                    personID = value;
+                }
+                else
+                {
+                    feedback += "\nERROR: Sorry you entered an invalid Person ID.";
+                }
+            }
         }
 
         public string Cellphone
@@ -175,6 +192,92 @@ namespace lab6_oquendo
 
             return comm.ExecuteReader();
 
+        }
+
+        public string UpdateARecord()
+        {
+            Int32 intRecords = 0;
+            string strResult = "";
+            SqlConnection Conn = new SqlConnection();
+
+            Conn.ConnectionString = GetConnected();
+
+            string strSQL = "UPDATE PersonV2 SET fname = @fname, mname = @mname, lname = @lname, Street1 = @Street1, Street2 = @Street2, City = @City, State = @State, Zipcode = @Zipcode, Phone = @Phone, Email = @Email, Cellphone = @Cellphone, IG = @IG WHERE PersonID = @PersonID;";
+
+            SqlCommand comm = new SqlCommand();
+            comm.CommandText = strSQL;
+            comm.Connection = Conn;
+
+            comm.Parameters.AddWithValue("@fname", fname);
+            comm.Parameters.AddWithValue("@mname", mname);
+            comm.Parameters.AddWithValue("@lname", lname);
+            comm.Parameters.AddWithValue("@Street1", Street1);
+            comm.Parameters.AddWithValue("@Street2", Street2);
+            comm.Parameters.AddWithValue("@City", City);
+            comm.Parameters.AddWithValue("@State", State);
+            comm.Parameters.AddWithValue("@Zipcode", Zipcode);
+            comm.Parameters.AddWithValue("@Phone", Phone);
+            comm.Parameters.AddWithValue("@Email", Email);
+            comm.Parameters.AddWithValue("@Cellphone", Cellphone);
+            comm.Parameters.AddWithValue("@IG", IG);
+            comm.Parameters.AddWithValue("@PersonID", PersonID);
+
+            try
+            {
+                Conn.Open();
+                intRecords = comm.ExecuteNonQuery();
+                strResult = $"SUCCESS: Updated {intRecords} Records";
+
+            }
+            catch (Exception err)
+            {
+                strResult = "ERROR: " + err.Message;
+            }
+            finally
+            {
+                Conn.Close();
+            }
+
+            return strResult;
+        }
+
+        public string DeleteOnePerson(int intPersonID)
+        {
+            Int32 intRecords = 0;
+            string strResult = "";
+
+            SqlConnection Conn = new SqlConnection();
+            SqlCommand comm = new SqlCommand();
+
+            string strConn = GetConnected();
+            Conn.ConnectionString = strConn;
+
+            string strSQL = "DELETE FROM PersonV2 WHERE PersonID = @PersonID;";
+
+
+            comm.CommandText = strSQL;
+            comm.Connection = Conn;
+
+            comm.Parameters.AddWithValue("@PersonID", intPersonID);
+
+
+            try
+            {
+                Conn.Open();
+                intRecords = comm.ExecuteNonQuery();
+                strResult = $"{intRecords} Records Deleted";
+
+            }
+            catch (Exception err)
+            {
+                strResult = "ERROR: " + err.Message;
+            }
+            finally
+            {
+                Conn.Close();
+            }
+
+            return strResult;
         }
 
         private string GetConnected()

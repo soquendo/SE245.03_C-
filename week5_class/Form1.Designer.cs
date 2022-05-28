@@ -51,6 +51,8 @@ namespace week5_class
             this.txtBookmark = new System.Windows.Forms.TextBox();
             this.lblBookmark = new System.Windows.Forms.Label();
             this.lblEBook_ID = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtTitle
@@ -84,9 +86,9 @@ namespace week5_class
             // 
             // btnAddBook
             // 
-            this.btnAddBook.Location = new System.Drawing.Point(561, 579);
+            this.btnAddBook.Location = new System.Drawing.Point(406, 579);
             this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Size = new System.Drawing.Size(108, 33);
+            this.btnAddBook.Size = new System.Drawing.Size(163, 42);
             this.btnAddBook.TabIndex = 5;
             this.btnAddBook.Text = "Add Book";
             this.btnAddBook.UseVisualStyleBackColor = true;
@@ -146,7 +148,7 @@ namespace week5_class
             // 
             // sample
             // 
-            this.sample.Location = new System.Drawing.Point(961, 579);
+            this.sample.Location = new System.Drawing.Point(1310, 59);
             this.sample.Name = "sample";
             this.sample.Size = new System.Drawing.Size(121, 33);
             this.sample.TabIndex = 11;
@@ -252,11 +254,33 @@ namespace week5_class
             this.lblEBook_ID.TabIndex = 25;
             this.lblEBook_ID.Text = "EBook ID:";
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(679, 579);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(163, 42);
+            this.btnUpdate.TabIndex = 26;
+            this.btnUpdate.Text = "Update Book";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(947, 579);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(163, 42);
+            this.btnDelete.TabIndex = 26;
+            this.btnDelete.Text = "Delete Book";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1514, 898);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.lblEBook_ID);
             this.Controls.Add(this.lblBookmark);
             this.Controls.Add(this.txtBookmark);
@@ -312,6 +336,8 @@ namespace week5_class
         private System.Windows.Forms.TextBox txtBookmark;
         private System.Windows.Forms.Label lblBookmark;
         private System.Windows.Forms.Label lblEBook_ID;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
 

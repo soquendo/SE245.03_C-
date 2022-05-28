@@ -93,6 +93,7 @@ namespace week5_class
             this.dgvResults.ShowCellErrors = false;
             this.dgvResults.Size = new System.Drawing.Size(1612, 646);
             this.dgvResults.TabIndex = 4;
+            this.dgvResults.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResults_CellDoubleClick);
             // 
             // SearchMgr
             // 
