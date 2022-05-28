@@ -18,3 +18,5 @@ C:\Users\soque\Desktop\SE245.03_CSharp\week5_class\obj\Debug\week5_class.csproj.
 C:\Users\soque\Desktop\SE245.03_CSharp\week5_class\obj\Debug\week5_class.csproj.CoreCompileInputs.cache
 C:\Users\soque\Desktop\SE245.03_CSharp\week5_class\obj\Debug\week5_class.exe
 C:\Users\soque\Desktop\SE245.03_CSharp\week5_class\obj\Debug\week5_class.pdb
+C:\Users\soque\Desktop\SE245.03_CSharp\week5_class\obj\Debug\week5_class.ControlPanel.resources
+C:\Users\soque\Desktop\SE245.03_CSharp\week5_class\obj\Debug\week5_class.SearchMgr.resources

@@ -8,3 +8,5 @@ C:\Users\soque\Desktop\SE245.03_CSharp\lab6_oquendo\obj\Debug\lab6_oquendo.cspro
 C:\Users\soque\Desktop\SE245.03_CSharp\lab6_oquendo\obj\Debug\lab6_oquendo.csproj.CoreCompileInputs.cache
 C:\Users\soque\Desktop\SE245.03_CSharp\lab6_oquendo\obj\Debug\lab6_oquendo.exe
 C:\Users\soque\Desktop\SE245.03_CSharp\lab6_oquendo\obj\Debug\lab6_oquendo.pdb
+C:\Users\soque\Desktop\SE245.03_CSharp\lab6_oquendo\obj\Debug\lab6_oquendo.ControlPanel.resources
+C:\Users\soque\Desktop\SE245.03_CSharp\lab6_oquendo\obj\Debug\lab6_oquendo.PeopleSearch.resources

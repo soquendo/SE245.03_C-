@@ -7,17 +7,52 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace week5_class
 {
     public partial class Form1 : Form
     {
+        /// <summary>
+        /// NEW - Constructor that Receives an EBook ID....this means we need to look up the data and populate fields (View/Edit/Del)
+        /// </summary>
+        /// <param name="intEBook_ID"></param>
+        
         public Form1()
+        {
+            InitializeComponent();
+        }
+
+        public Form1(int intEBook_ID)
         {
             //retrieves from the parent
             InitializeComponent();
 
+            Ebook temp = new Ebook();
+            SqlDataReader dr = temp.FindOneEBook(intEBook_ID);
+
             dtpDateRentalExpires.Value = DateTime.Now.AddDays(14);
+
+            //Use that info to fill out the form
+            //Loop thru the records stored in the reader 1 record at a time
+            // Note that since this is based on one person's ID, then we
+            //  should only have one record
+            while (dr.Read())
+            {
+                //Take the Name(s) from the datareader and copy them
+                // into the appropriate text fields
+                txtTitle.Text = dr["Title"].ToString();
+                txtAuthorFirst.Text = dr["AuthorFirst"].ToString();
+                txtAuthorLast.Text = dr["AuthorLast"].ToString();
+                txtEmail.Text = dr["Email"].ToString();
+                txtPages.Text = dr["Pages"].ToString();
+                txtBookmark.Text = dr["BookmarkPage"].ToString();
+                lblEBook_ID.Text = dr["EBook_ID"].ToString();
+
+                dtpDatePublished.Value = DateTime.Parse(dr["DatePublished"].ToString());
+                dtpDateRentalExpires.Value = DateTime.Parse(dr["DateRentalExpires"].ToString());
+          
+            }
         }
 
         private void lblFeedback_Click(object sender, EventArgs e)

@@ -74,9 +74,10 @@ namespace midterm_oquendo
             string strResult = "";
             SqlConnection Conn = new SqlConnection();
 
-            Conn.ConnectionString = @"Server=sql.neit.edu\studentsqlserver,4500;Database=SE133_SOquendo;User ID=SE133_SOquendo;Password=008016420;";
+            string strConn = GetConnected();
+            Conn.ConnectionString = strConn;
 
-            string strSQL = "INSERT INTO PersonV2 (fname, mname, lname, Street1, Street2, City, State, Zipcode, Phone, Email, Cellphone, IG) VALUES (@fname, @mname, @lname, @Street1, @Street2, @City, @State, @Zipcode, @Phone, @Email, @Cellphone, @IG)";
+            string strSQL = "INSERT INTO PersonV2 (Fname, Mname, Lname, Street1, Street2, City, State, Zip, Pnum, Email, CellPhone, IgURL) VALUES (@Fname, @Mname, @Lname, @Street1, @Street2, @City, @State, @Zip, @Pnum, @Email, @CellPhone, @IgURL)";
 
             SqlCommand comm = new SqlCommand();
             comm.CommandText = strSQL;
@@ -112,6 +113,73 @@ namespace midterm_oquendo
             }
 
             return strResult;
+        }
+
+        public DataSet PeopleSearch(String strFname, String strLname, String strState)
+        {
+            DataSet ds = new DataSet();
+
+            SqlCommand comm = new SqlCommand();
+
+            String strSQL = "SELECT PersonID, fname, lname, State FROM PersonV2 WHERE 0=0";
+
+            if (strFname.Length > 0)
+            {
+                strSQL += " AND fname LIKE @fname";
+                comm.Parameters.AddWithValue("@fname", "%" + strFname + "%");
+            }
+            if (strLname.Length > 0)
+            {
+                strSQL += " AND lname LIKE @lname";
+                comm.Parameters.AddWithValue("@lname", "%" + strLname + "%");
+            }
+            if (strState.Length > 0)
+            {
+                strSQL += " AND State LIKE @State";
+                comm.Parameters.AddWithValue("@State", "%" + strState + "%");
+            }
+
+            SqlConnection conn = new SqlConnection();
+            string strConn = GetConnected();
+            conn.ConnectionString = strConn;
+
+            comm.Connection = conn;
+            comm.CommandText = strSQL;
+
+            SqlDataAdapter da = new SqlDataAdapter();
+            da.SelectCommand = comm;
+
+            conn.Open();
+            da.Fill(ds, "PersonV2_temp");
+            conn.Close();
+
+            return ds;
+        }
+
+        public SqlDataReader FindOnePerson(int intPersonID)
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand comm = new SqlCommand();
+
+            String strConn = GetConnected();
+
+            string sqlString = "SELECT * FROM PersonV2 WHERE PersonID = @PersonID";
+
+            conn.ConnectionString = strConn;
+
+            comm.Connection = conn;
+            comm.CommandText = sqlString;
+            comm.Parameters.AddWithValue("@PersonID", intPersonID);
+
+            conn.Open();
+
+            return comm.ExecuteReader();
+
+        }
+
+        private string GetConnected()
+        {
+            return "Server=sql.neit.edu,4500;Database=SE133_SOquendo;User Id=SE133_SOquendo;Password=008016420;";
         }
 
     }

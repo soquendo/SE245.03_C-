@@ -18,19 +18,31 @@ namespace lab6_oquendo
         private string zipCode;
         private string phone;
         private string email;
-        private string feedback = "";
+        protected string feedback;
+
+        public Person()
+        {
+            fName = "";
+            mName = "";
+            lName = "";
+            street1 = "";
+            street2 = "";
+            city = "";
+            state = "";
+            zipCode = "";
+            phone = "";
+            email = "";
+            feedback = "";
+
+        }
 
         public string Feedback
         {
             get
             {
-                return feedback; 
+                return feedback;
             }
 
-            set
-            {
-                feedback = value;
-            }
         }
 
         public string fname
@@ -44,13 +56,13 @@ namespace lab6_oquendo
             {
                 if (ValidationLibrary.IsItFilledIn(value) == false)
                 {
-                    Feedback += "\nERROR: First name cannot be left blank";
+                    feedback += "\nERROR: First name cannot be left blank";
                 }
                 else
                 {
-                    if(ValidationLibrary.badWords(value) == true)
+                    if (ValidationLibrary.badWords(value) == true)
                     {
-                        Feedback += "\nERROR: Cannot contain bad words";
+                        feedback += "\nERROR: Cannot contain bad words";
                     }
                     else
                     {
@@ -71,7 +83,7 @@ namespace lab6_oquendo
             {
                 if (ValidationLibrary.badWords(value) == true)
                 {
-                    Feedback += "\nERROR: Cannot contain bad words";
+                    feedback += "\nERROR: Cannot contain bad words";
                 }
                 else
                 {
@@ -91,13 +103,13 @@ namespace lab6_oquendo
             {
                 if (ValidationLibrary.IsItFilledIn(value) == false)
                 {
-                    Feedback += "\nERROR: Last name cannot be left blank";
+                    feedback += "\nERROR: Last name cannot be left blank";
                 }
                 else
                 {
                     if (ValidationLibrary.badWords(value) == true)
                     {
-                        Feedback += "\nERROR: Cannot contain bad words";
+                        feedback += "\nERROR: Cannot contain bad words";
                     }
                     else
                     {
@@ -118,7 +130,7 @@ namespace lab6_oquendo
             {
                 if (ValidationLibrary.IsItFilledIn(value) == false)
                 {
-                    Feedback += "\nERROR: Address cannot be left blank";
+                    feedback += "\nERROR: Address cannot be left blank";
                 }
                 else
                 {
@@ -151,14 +163,14 @@ namespace lab6_oquendo
             {
                 if (ValidationLibrary.IsItFilledIn(value) == false)
                 {
-                    Feedback += "\nERROR: City cannot be left blank";
+                    feedback += "\nERROR: City cannot be left blank";
                 }
                 else
                 {
                     city = value;
                 }
             }
-          
+
         }
 
         public string State
@@ -174,10 +186,10 @@ namespace lab6_oquendo
                 {
                     state = value;
                 }
-                
+
                 else
                 {
-                    Feedback = "\nERROR: Enter two-character state abbreviation (Ex. NY, MT, WA)";
+                    feedback = "\nERROR: Enter two-character state abbreviation (Ex. NY, MT, WA)";
                 }
 
             }
@@ -194,11 +206,11 @@ namespace lab6_oquendo
             {
                 if (ValidationLibrary.IsItFilledZip(value) == false)
                 {
-                    Feedback += "\nERROR: Please enter 5 digit number (Ex. 02861)";
+                    feedback += "\nERROR: Please enter 5 digit number (Ex. 02861)";
                 }
                 if (ValidationLibrary.IsItNum(value) == false)
                 {
-                    Feedback += "\nERROR: Please enter 5 digit number (Ex. 02861)";
+                    feedback += "\nERROR: Please enter 5 digit number (Ex. 02861)";
                 }
                 else
                 {
@@ -219,13 +231,13 @@ namespace lab6_oquendo
             {
                 if (ValidationLibrary.IsItFilledPhone(value) == false)
                 {
-                    Feedback += "\nERROR: Please enter only digits (Ex. 4019997777)";
+                    feedback += "\nERROR: Phone number can not be blank, Please enter only digits (Ex. 4019997777)";
                 }
                 else
                 {
                     if (ValidationLibrary.IsItNum(value) == false)
                     {
-                        Feedback += "\nERROR: Please enter only digits (Ex. 4017776666)";
+                        feedback += "\nERROR: Please enter only digits forphone number (Ex. 4017776666)";
                     }
                     else
                     {
@@ -250,7 +262,7 @@ namespace lab6_oquendo
                 }
                 else
                 {
-                    Feedback = "\nERROR: Invalid Email format";
+                    feedback = "\nERROR: Invalid Email format";
                 }
 
             }

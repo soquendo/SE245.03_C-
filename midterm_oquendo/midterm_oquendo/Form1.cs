@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace midterm_oquendo
 {
@@ -17,11 +18,37 @@ namespace midterm_oquendo
             InitializeComponent();
         }
 
+        public Form1(Int32 intPersonID)
+        {
+            InitializeComponent();
+            PersonV2 temp = new PersonV2();
+
+            SqlDataReader dr = temp.FindOnePerson(intPersonID);
+
+            while (dr.Read())
+            {
+                txt_fname.Text = dr["fname"].ToString();
+                txt_mname.Text = dr["mname"].ToString();
+                txt_lname.Text = dr["lname"].ToString();
+                txt_street1.Text = dr["Street1"].ToString();
+                txt_street2.Text = dr["Street2"].ToString();
+                txt_city.Text = dr["City"].ToString();
+                txt_state.Text = dr["State"].ToString();
+                txt_zipcode.Text = dr["Zipcode"].ToString();
+                txt_phone.Text = dr["Phone"].ToString();
+                txt_email.Text = dr["Email"].ToString();
+                txt_cellphone.Text = dr["Cellphone"].ToString();
+                txt_Instagram.Text = dr["IG"].ToString();
+
+            }
+        }
+
+
         private void submit_button_Click(object sender, EventArgs e)
         {
             txt_feedback.Text = "";
             PersonV2 temp = new PersonV2();
-            
+
             temp.fname = txt_fname.Text;
             temp.mname = txt_mname.Text;
             temp.lname = txt_lname.Text;
@@ -35,6 +62,8 @@ namespace midterm_oquendo
 
             temp.Cellphone = txt_cellphone.Text;
             temp.IG = txt_Instagram.Text;
+
+
 
             //temp.CustomerSince = dtpCustomerSince.Value;
             //temp.TotalPurchases = txt_TotalPurchases.Text; //double

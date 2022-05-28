@@ -31,11 +31,11 @@ namespace lab6_oquendo
             int slashLocation = temp.IndexOf("/");
             int afterSlash = temp.IndexOf("/", slashLocation + 1);
 
-            if (temp.Length < 20)
+            if (temp.Length > 14)
             {
-                blnResult = false;
+                blnResult = true;
             }
-            else if (slashLocation != 14)
+            else if (slashLocation != 13)
             {
                 blnResult = false;
             }
@@ -45,13 +45,17 @@ namespace lab6_oquendo
 
         public static bool IsItValidIG(string temp)
         {
-            bool result = false;
+            bool result;
 
             string strIG = "instagram.com/";
 
             if (temp.Contains(strIG))
             {
                 result = true;
+            }
+            else
+            {
+                result = false;
             }
 
             return result;
@@ -72,20 +76,24 @@ namespace lab6_oquendo
 
         public static bool IsItFilledPhone(string temp)
         {
-            bool result = false;
+            bool result;
 
-            if (temp.Length == 10)
+            if (temp.Length != 10)
             {
-                result = true;
+                result = false;
             }
-            
+            else
+            {
+                result = Int64.TryParse(temp, out long num);
+            }
+
             return result;
         }
 
         public static bool phoneCheck(string temp)
         {
             bool result;
-            
+
             if (temp.Length < 10)
             {
                 result = false;
@@ -108,7 +116,7 @@ namespace lab6_oquendo
             {
                 result = true;
             }
-            
+
             return result;
         }
 
@@ -225,12 +233,12 @@ namespace lab6_oquendo
             string strGoodChars = "0123456789";
             bool blnResult = true;
 
-            foreach(char ch in temp)
+            foreach (char ch in temp)
             {
                 if (!strGoodChars.Contains(ch))
                 {
                     blnResult = false;
-                }                  
+                }
             }
             return blnResult;
         }
@@ -240,6 +248,22 @@ namespace lab6_oquendo
             bool blnResult;
 
             if (temp != num)
+            {
+                blnResult = true;
+            }
+            else
+            {
+                blnResult = false;
+            }
+
+            return blnResult;
+        }
+
+        public static bool isThisCell(int temp, int num)
+        {
+            bool blnResult;
+
+            if (temp == num)
             {
                 blnResult = true;
             }
